@@ -1,0 +1,13 @@
+@mixin _fz($fontSize){
+  @if map-has-key($_font-size, $fontSize) {
+    font-size: map-get($map: $_font-size_SP, $key: $fontSize);
+
+    @include _mq-up(){
+      font-size: map-get($map: $_font-size, $key: $fontSize);
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$fontSize}`. "
+    + "Please make sure it is defined in `$_font-size` map.";
+  }
+  
+}

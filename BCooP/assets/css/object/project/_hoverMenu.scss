@@ -1,0 +1,37 @@
+.p-choverMenu {
+  padding: 2rem 0 2rem 2rem;
+  font-size: 1.6rem;
+}
+@include _mq-up(){
+  .p-choverMenu {
+    position: absolute;
+    width: 100%;
+    top: 5rem;
+    padding: 2rem 1rem;
+    border: 1px solid $_color-border;
+    background-color: $_color-bg1;
+  }
+  .is-hover .p-choverMenu {
+    display: block;
+  }
+}
+
+.p-choverMenu__item {
+  position: relative;
+
+  &:hover {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 15%;
+        width: 70%;
+        height: .2rem;
+        background-color: $_color-ac1;
+    }
+  }
+}
+
+.p-choverMenu__link {
+  display: block;
+}

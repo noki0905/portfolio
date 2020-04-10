@@ -1,0 +1,86 @@
+.c-hamburger {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 5rem;
+  height: 5rem;
+  margin: auto;
+  background-color: $_color-bg1;
+  border-radius: 50%;
+  box-shadow: 0 0 2rem transparent;
+  outline: none;
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+}
+.c-hamburger:hover,
+.c-hamburger:focus {
+  box-shadow: 0 0 .5rem rgba(255, 255, 255, .7 );
+}
+
+.c-hamburger__line {
+  position: absolute;
+  overflow: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 1.8rem;
+  height: .2rem;
+  background-color: $_color-ac1;
+  -webkit-transition: inherit;
+          transition: inherit;
+}
+.c-hamburger__line::before,
+.c-hamburger__line::after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  content: '';
+  -webkit-transition: inherit;
+          transition: inherit;
+}
+.c-hamburger__line::before {
+  top: -.5rem;
+}
+.c-hamburger__line::after {
+  top: .5rem;
+}
+
+.c-hamburger[aria-expanded="true"] .c-hamburger__line {
+  background-color: transparent;
+}
+
+.c-hamburger[aria-expanded="true"] .c-hamburger__line::before,
+.c-hamburger[aria-expanded="true"] .c-hamburger__line::after {
+  top: 0;
+  background-color: $_color-ac1;
+}
+
+.c-hamburger[aria-expanded="true"] .c-hamburger__line::before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.c-hamburger[aria-expanded="true"] .c-hamburger__line::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.u-visuallyHidden {
+  position: absolute;
+  white-space: nowrap;
+  width: .1rem;
+  height: .1rem;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%); 
+  margin: -.1rem;
+}

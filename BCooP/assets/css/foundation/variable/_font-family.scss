@@ -1,0 +1,14 @@
+// font-familyを定義しています。WindowsとMacで指定する名前が微妙に変わるので、
+// 半角スペースなどを変更しないようにしてください。
+
+// ## ゴシックとsans-serif
+// 欧文書体は"Helvetica Neue"か"Verdana"、
+// "Helvetica Neue"を指定する場合はWindowsのフォールバックに"Arial"か"Verdana"、
+// HelveticaはWindowsではArialとして表示される。
+// 和文書体は游ゴシックかヒラギノ角ゴ、游書体はWindowsのChromeで薄く表示される。
+// MS書体はアンチエイリアスが効かないために指定せず、メイリオを指定する。
+
+// Noto sans
+$_font-family-noto: 'Noto Sans JP', sans-serif;;
+// Roboto
+$_font-family-roboto: 'Roboto', sans-serif;

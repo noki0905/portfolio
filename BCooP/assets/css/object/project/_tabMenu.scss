@@ -1,0 +1,14 @@
+.p-tabMenu {
+    display: none;
+}
+
+.p-tabMenu.is-tabActive {
+    display: block;
+}
+
+.p-tabMenu__button {
+    cursor: pointer;
+}
+.p-tabMenu__button--unable {
+    cursor: default;
+}

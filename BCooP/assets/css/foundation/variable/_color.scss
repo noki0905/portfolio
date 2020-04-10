@@ -1,0 +1,23 @@
+// base color
+$_color-text1: #3B3B3B !default;
+$_color-text2: #444444 !default;
+$_color-ac1: #0C104D !default;
+$_color-ac2:#FFFF57 !default;
+$_color-ac3: #D90000 !default;
+$_color-theme3: #fff !default;
+$_color-bg1: #F5F5F5 !default;
+$_color-bg2: #F0F0F0 !default;
+$_color-border: #333333 !default;
+
+// link color
+// $_color-link: #2b70ba !default;
+$_color-link: $_color-text1 !default;
+$_color-link--visited: lighten($_color-link, 15%)  !default;
+$_color-link--hover: lighten($_color-link, 15%) !default;
+
+// component color
+$_color-ui-border: #ddd !default;
+$_color-ui-bg: #fff !default;
+
+// brand volor
+$_color-line: #00B900 !default;

@@ -1,0 +1,103 @@
+ /* #Margin
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: margin
+name: margin
+categories: [utility]
+---
+
+マージンで余白の管理をします。常に上方向にだけ余白をとります。
+`<section>`要素を使うようなセクションの余白はlayout/_section.scssで管理します。
+
+* `.u-mb`は常に余白をとります。
+* `.u-mb-gain`はあるブレイクポイント以上で余白を指定します。
+* `.u-mb-lose`はあるブレイクポイント以上で余白を無くします。
+
+サイズのバリエーションは最大で5つ、通常は3つとします。
+
+1. `tiny`(optional)
+2. `small`
+3. `medium`
+4. `large`
+5. `huge`(optional)
+
+```block
+<div class="u-mb-medium">
+  <p>Lorem ipsum</p>
+</div>
+
+<div class="u-mb-gain-medium">
+  <p>Lorem ipsum</p>
+</div>
+
+<div class="u-mb-lose-medium">
+  <p>Lorem ipsum</p>
+</div>
+```
+*/
+/* 常に余白を指定するクラス。 */
+.u-mb-small {
+  margin-top: 0.5em !important;
+  @include _mq-up() {
+    margin-top: 1em !important;
+  }
+}
+
+.u-mb-medium {
+  margin-top: 1em !important;
+  @include _mq-up() {
+    margin-top: 2em !important;
+  }
+}
+
+.u-mb-large {
+  margin-top: 2em !important;
+  @include _mq-up() {
+    margin-top: 4em !important;
+  }
+}
+
+/* ブレイクポイント以上で余白を指定するクラス。 */
+.u-mb-gain-small {
+  margin-top: 0 !important;
+  @include _mq-up() {
+    margin-top: 1em !important;
+  }
+}
+
+.u-mb-gain-medium {
+  margin-top: 0 !important;
+  @include _mq-up() {
+    margin-top: 2em !important;
+  }
+}
+
+.u-mb-gain-large {
+  margin-top: 0 !important;
+  @include _mq-up() {
+    margin-top: 4em !important;
+  }
+}
+
+/* ブレイクポイント以上で余白を無くすクラス。 */
+.u-mb-lose-small {
+  margin-top: 0.5em !important;
+  @include _mq-up() {
+    margin-top: 0 !important;
+  }
+}
+
+.u-mb-lose-medium {
+  margin-top: 1em !important;
+  @include _mq-up() {
+    margin-top: 0 !important;
+  }
+}
+
+.u-mb-lose-large {
+  margin-top: 2em !important;
+  @include _mq-up() {
+    margin-top: 0 !important;
+  }
+}

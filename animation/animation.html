@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="hum.js"></script>
+  <script type="text/javascript" src="moon.js"></script>
+  <script type="text/javascript" src="Intersection-observer.js"></script>
+  <script type="text/javascript" src="deley-img.js"></script>
+</head>
+<body>
+  <!-- <div class="ani1">
+    <div class="ani2"></div>
+    <p class="ani3">menumenumenumenumenu</p>
+  </div> -->
+  <div class="arrow">↓</div>
+  <button type="button" id="js-buttonHamburger" class="c-button p-hamburger" aria-controls="global-nav" aria-expanded="false">
+  <span class="p-hamburger__line">
+    <span class="u-visuallyHidden">
+      メニューを開閉する
+    </span>
+  </span>
+  </button>
+  <nav class="gnav">
+    <ul class="gnav-ul">
+      <li class="gnav-item">HOME</li>
+      <li class="gnav-item">BLOG</li>
+      <li class="gnav-item">ABOUT</li>
+      <li class="gnav-item">CONTACT</li>
+    </ul>
+  </nav>
+  <div><img src="noimage.png" data-src="test.jpg" alt="" class="deley-img lazy"></div>
+  <!-- svg -->
+  <svg class="moon_wrap" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 600 600">
+    <circle cx="100" cy="100" r="80" stroke-width="0" stroke="#FFF" fill="#FFFF57" fill-opacity='.7' />
+  </svg>
+  <svg class="moon_wrap" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 600 600">
+    <circle id='moon_hide' r="80" stroke-width="0" stroke="#00FFFF" fill="#30373f" />
+  </svg>
+  <div class="scroll_long"></div>
+
+</body>
+</html>

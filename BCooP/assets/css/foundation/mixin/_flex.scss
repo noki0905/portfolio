@@ -1,0 +1,12 @@
+@mixin _c-flex() {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin _c-flex__item() {
+  font-size: medium;
+  vertical-align: top;
+}

@@ -1,0 +1,9 @@
+.c-list__num {
+  float: left;
+  font-size: 2rem;
+}
+@include _mq-up(){
+  .c-list__num {
+      font-size: 2.4rem;
+  }
+}

@@ -1,0 +1,70 @@
+.p-accordionMenu {
+    position: relative;
+}
+
+.p-accordionMenu__title {
+    position: relative;
+    font-weight: bold;
+}
+
+.p-accordionMenu__list {
+    list-style: none;
+}
+
+.p-accordionMenu__item {
+    display: block;
+    position: relative;
+    font-weight: bold;
+}
+
+.p-accordionMenu__item-name {
+    display: block;
+    position: relative;
+    transition: opacity .5s 0s ease;
+}
+
+.p-accordionMenu__button {
+    position: absolute;
+    display: block;
+    bottom: 50%;
+    right: 2rem;
+    width: 1.4rem;
+    height: .2rem;
+    background-color: $_color-bg1;
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: inherit;
+        height: inherit;
+        background-color: inherit;
+        transform: rotateZ(90deg);
+        transition: transform .5s 0s ease;
+    }
+}
+.is-accordionActive .p-accordionMenu__button::after {
+    transform: rotateZ(180deg);
+}
+
+.p-accordionMenu__contents-list {
+    display: none;
+    list-style: none;
+}
+
+.p-accordionMenu__content {
+    margin-top: 1.6rem;
+    font-weight: normal;
+}
+.p-accordionMenu__content:first-child {
+    margin-top: 0;
+}
+
+.p-accordionMenu__link {
+    display: block;
+    border-bottom: 1px solid transparent;
+    transition: all .3s 0s linear;
+
+    &:hover {
+        border-bottom: 1px solid;
+    }
+}

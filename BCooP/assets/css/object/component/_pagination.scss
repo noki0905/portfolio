@@ -1,0 +1,41 @@
+ul.page-numbers {
+  text-align: center;
+  margin: 3.2rem auto 0;
+  list-style: none;
+  color: $_color-ac2;
+  font-size: 1.4rem;
+
+  li{
+    display: inline-block;
+    margin: 0 1rem;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+    }
+  }
+}
+
+@include _mq-up(){
+  ul.page-numbers {
+    margin: 5.6rem auto 0;
+    font-size: 1.6rem;
+  
+    li{
+  
+      span {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+}
+
+span.page-numbers.current {
+  color: $_color-text1;
+  background-color: $_color-ac2;
+}

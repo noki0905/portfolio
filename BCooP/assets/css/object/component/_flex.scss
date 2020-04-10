@@ -1,0 +1,211 @@
+ /* #Flex
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: flex
+name: flex
+categories: [component]
+---
+
+汎用的なflex-boxオブジェクトです。
+
+Modifierは以下のとおりです。
+
+* 子要素の並ぶ向き rowR, column, columnR
+* 子要素の並ぶ向き wrap, wrapR
+* 水平方向の揃え jcfs, jcfe, jcsb, jcse, jcsa
+* 垂直方向の揃え aifs, aife, aice, aibl
+* `.c-flex__item`のカラム幅をまとめて指定 `--colx`, `--colxandx`
+
+```block
+<div class="c-wrapper">
+  <div class="c-flex c-flex--medium" style="margin-bottom:1rem;">
+    <div class="c-flex__item u-8of12-md"><div style="background-color:lightblue;">c-flex__item u-8of12-md</div></div>
+    <div class="c-flex__item u-4of12-md"><div style="background-color:lightblue;">c-flex__item u-4of12-md</div></div>
+  </div>
+
+  <div class="c-flex c-flex--reverse c-flex--medium" style="margin-bottom:1rem;">
+    <div class="c-flex__item u-8of12-md"><div style="background-color:lightblue;">c-flex--rev c-flex__item u-8of12-md</div></div>
+    <div class="c-flex__item u-4of12-md"><div style="background-color:lightblue;">c-flex--rev c-flex__item u-4of12-md</div></div>
+  </div>
+
+  <div class="c-flex c-flex--center c-flex--medium" style="margin-bottom:1rem;">
+    <div class="c-flex__item u-8of12-md"><div style="background-color:lightblue;">c-flex--center c-flex__item u-8of12-md</div></div>
+  </div>
+
+  <div class="c-flex c-flex--medium c-flex--col2-sm c-flex--col3-md" style="margin-bottom:1rem;">
+    <div class="c-flex__item"><div style="background-color:lightblue;">c-flex__item c-flex--col2-sm c-flex--col3-md</div></div>
+    <div class="c-flex__item"><div style="background-color:lightblue;">c-flex__item c-flex--col2-sm c-flex--col3-md</div></div>
+    <div class="c-flex__item"><div style="background-color:lightblue;">c-flex__item c-flex--col2-sm c-flex--col3-md</div></div>
+  </div>
+
+  <div class="c-flex c-flex--col4and8" style="margin-bottom:1rem;">
+    <div class="c-flex__item"><div style="background-color:lightblue;">c-flex__item u-8of12-md</div></div>
+    <div class="c-flex__item"><div style="background-color:lightblue;">c-flex__item u-4of12-md</div></div>
+  </div>
+</div>
+```
+*/
+
+.c-flex {
+  @include _c-flex();
+}
+
+.c-flex__item {
+  @include _c-flex__item();
+}
+
+/**
+ * 子要素の並ぶ向きを選択します。
+ */
+
+.c-flex.-rowR{
+  flex-direction: row-reverse;
+}
+
+.c-flex.-column{
+  flex-direction: column;
+}
+
+.c-flex.-columnR{
+  flex-direction: column-reverse;
+}
+
+/**
+ * 子要素の折返しを選択します。
+ */
+
+.c-flex.-wrap{
+  flex-wrap: wrap;
+}
+
+.c-flex.-wrapR{
+  flex-wrap: wrap-reverse;
+}
+
+/**
+ * 子要素の水平方向の揃えを選択します。
+ */
+
+// @param $jc - 水平方向の揃えに必要なプロパティを取得します。
+// @param $breakpoint(null) - メディアクエリ用のキーワードを渡します。
+@mixin _flex-jc($breakpoint: null) {
+  .c-flex.-jcfs#{$breakpoint} {
+    justify-content: flex-start;
+  }
+  .c-flex.-jcfe#{$breakpoint} {
+    justify-content: flex-end;
+  }
+  .c-flex.-jcsb#{$breakpoint} {
+    justify-content: space-between;
+  }
+  .c-flex.-jcse#{$breakpoint} {
+    justify-content: space-evenly;
+  }
+  .c-flex.-jcsa#{$breakpoint} {
+    justify-content: space-around;
+  }
+  .c-flex.-jcce#{$breakpoint} {
+    justify-content: center;
+  }
+}
+
+// ブレイクポイントのないclassを生成します。
+@include _flex-jc();
+
+// ブレイクポイント付きのclassを生成します。
+// @requires - $breakpoints
+@each $name, $breakpoint in $_breakpoint-up {
+  @media #{$breakpoint} {
+    @include _flex-jc(-#{$name})
+  }
+}
+
+/**
+ * 子要素の垂直方向の揃えを選択します。
+ */
+
+// @param $jc - 水平方向の揃えに必要なプロパティを取得します。
+// @param $breakpoint(null) - メディアクエリ用のキーワードを渡します。
+@mixin _flex-ai($breakpoint: null) {
+  .c-flex.-aifs#{$breakpoint} {
+    align-items: flex-start;
+  }
+  .c-flex.-aife#{$breakpoint} {
+    align-items: flex-end;
+  }
+  .c-flex.-aice#{$breakpoint} {
+    align-items: center;
+  }
+  .c-flex.-aibl#{$breakpoint} {
+    align-items: baseline;
+  }
+}
+
+// ブレイクポイントのないclassを生成します。
+@include _flex-ai();
+
+// ブレイクポイント付きのclassを生成します。
+// @requires - $breakpoints
+@each $name, $breakpoint in $_breakpoint-up {
+  @media #{$breakpoint} {
+    @include _flex-ai(-#{$name})
+  }
+}
+
+/**
+ * `.c-flex__item`のカラム数をまとめて指定します。
+ */
+@include _responsive('.c-flex--col2') {
+  > .c-flex__item {
+    width: percentage(1 / 2);
+  }
+}
+
+@include _responsive('.c-flex--col3') {
+  > .c-flex__item {
+    width: percentage(1 / 3);
+  }
+}
+
+@include _responsive('.c-flex--col4') {
+  > .c-flex__item {
+    width: percentage(1 / 4);
+  }
+}
+
+@include _responsive('.c-flex--col2and10') {
+  > .c-flex__item:nth-child(odd) {
+    width: percentage(2 / 12);
+  }
+  > .c-flex__item:nth-child(even) {
+    width: percentage(10 / 12);
+  }
+}
+
+@include _responsive('.c-flex--col3and9') {
+  > .c-flex__item:nth-child(odd) {
+    width: percentage(3 / 12);
+  }
+  > .c-flex__item:nth-child(even) {
+    width: percentage(9 / 12);
+  }
+}
+
+@include _responsive('.c-flex--col4and8') {
+  > .c-flex__item:nth-child(odd) {
+    width: percentage(4 / 12);
+  }
+  > .c-flex__item:nth-child(even) {
+    width: percentage(8 / 12);
+  }
+}
+
+@include _responsive('.c-flex--col5and7') {
+  > .c-flex__item:nth-child(odd) {
+    width: percentage(5 / 12);
+  }
+  > .c-flex__item:nth-child(even) {
+    width: percentage(7 / 12);
+  }
+}

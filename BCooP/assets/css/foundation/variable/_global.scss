@@ -1,0 +1,44 @@
+// default breakpoint
+$_default-breakpoint: 'md';
+
+// default wrapper width
+$_max-width: 108rem !default;
+
+// default grid columns
+$_column: 12 !default;
+
+$_font-size--small: 0.8em !default;
+
+// base font-size
+$_font-size: (
+  'xs': 2rem,
+  'sm': 2.4rem,
+  'md': 3rem,
+  'lg': 3.6rem,
+  'xl': 6rem
+) !default;
+
+$_font-size_SP: (
+  'xs': 1.6rem,
+  'sm': 2rem,
+  'md': 2.4rem,
+  'lg': 2.8rem,
+  'xl':2.1rem
+) !default;
+
+// base font-weight
+$_font-weight-light: 300;
+$_font-weight-normal: 400;
+$_font-weight-medium: 500;
+$_font-weight-bold: 700;
+
+// base Rounded corners
+$_radius: 3px !default;
+
+// base animation speed
+$_duration: 0.3s !default;
+
+// base spacing
+$_white-space: 1rem !default;
+$_white-space--small: ($_white-space / 2) !default;
+$_white-space--large: ($_white-space * 2) !default;

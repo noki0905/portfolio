@@ -1,0 +1,8 @@
+.u-clearfix{
+    
+    &::after {
+        content: '';
+        display: block !important;
+        clear: both !important;
+    }
+}
