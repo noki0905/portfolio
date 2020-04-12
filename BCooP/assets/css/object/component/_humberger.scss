@@ -1,21 +1,21 @@
 .c-hamburger {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
+  z-index: _z-index('modal');
+  top: 2rem;
+  right: 2rem;
   width: 5rem;
   height: 5rem;
   margin: auto;
   background-color: $_color-bg1;
+  border: none;
   border-radius: 50%;
   box-shadow: 0 0 2rem transparent;
   outline: none;
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
 }
-.c-hamburger:hover,
-.c-hamburger:focus {
-  box-shadow: 0 0 .5rem rgba(255, 255, 255, .7 );
+.c-hamburger:hover {
+  box-shadow: 0 0 .5rem rgba(0, 0, 0, .3 );
 }
 
 .c-hamburger__line {

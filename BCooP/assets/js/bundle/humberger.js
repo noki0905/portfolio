@@ -12,7 +12,7 @@ jQuery( document ).ready(function() {
       jQuery(this).attr('aria-expanded', false);
     }
   });
-  jQuery(".js-global-nav a").click(function () {
+  jQuery(".js-globalNav a").click(function () {
     jQuery('body').toggleClass('is-drawerActive');
     
     if (jQuery('#js-buttonHamburger').attr('aria-expanded') == 'false') {

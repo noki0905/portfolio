@@ -12,8 +12,9 @@ $_color-border: #333333 !default;
 // link color
 // $_color-link: #2b70ba !default;
 $_color-link: $_color-text1 !default;
-$_color-link--visited: lighten($_color-link, 15%)  !default;
-$_color-link--hover: lighten($_color-link, 15%) !default;
+$_color-link--visited: $_color-link !default;
+$_color-link--hover: $_color-link !default;
+// $_color-link--hover: lighten($_color-link, 30%) !default;
 
 // component color
 $_color-ui-border: #ddd !default;
