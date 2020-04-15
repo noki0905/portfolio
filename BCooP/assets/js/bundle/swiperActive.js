@@ -1,0 +1,24 @@
+jQuery(document).ready(function () {
+  //initialize swiper when document ready
+  var mySwiper = new Swiper ('.tp-works__slider', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    speed: 800,
+    centeredSlides : true,
+    pagination: {
+      el: '.c-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    }
+  })
+});

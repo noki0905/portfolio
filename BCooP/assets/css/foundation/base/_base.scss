@@ -32,7 +32,7 @@ html {
 
 body {
   color: $_color-text1;
-  font-family: $_font-family-noto;
+  font-family: $_font-family-nunito;
   font-weight: $_font-weight-normal;
   /* アンチエイリアスを指定する */
   -webkit-font-smoothing: subpixel-antialiased;
@@ -48,22 +48,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1, h2 {
   font-weight: $_font-weight-bold;
-  
 }
-
 h1 {
-  font-family: $_font-family-roboto;
   color: $_color-ac1;
+  @include _fz('xxl');
 }
-h2 {}
+h2 { @include _fz('xl'); }
 h3 {}
 h4 {}
 h5 {}
 h6 {}
 
+p {
+  @include _fz('xs');
+}
+
 ul, ol {
   padding-left: 0;
   cursor: auto;
+}
+li {
+  list-style: none;
 }
 /**
  * ネストされたリストのマージンをリセットします。

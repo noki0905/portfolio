@@ -1,12 +1,12 @@
 .c-hamburger {
-  position: absolute;
+  position: fixed;
   z-index: _z-index('modal');
   top: 2rem;
   right: 2rem;
   width: 5rem;
   height: 5rem;
   margin: auto;
-  background-color: $_color-bg1;
+  background-color: transparent;
   border: none;
   border-radius: 50%;
   box-shadow: 0 0 2rem transparent;
@@ -83,4 +83,21 @@
   clip: rect(0 0 0 0);
   clip-path: inset(50%); 
   margin: -.1rem;
+}
+
+@include _mq-up(){
+  .c-hamburger {
+    width: 7rem;
+    height: 7rem;
+  }
+  .c-hamburger__line{
+    width: 4rem;
+    height: .4rem;
+  }
+  .c-hamburger__line::before {
+    top: -1.2rem;
+  }
+  .c-hamburger__line::after {
+    top: 1.2rem;
+  }
 }

@@ -1,0 +1,38 @@
+.c-arrowDown {
+  position: absolute;
+  bottom: 15vh;
+  left: 50%;
+  width: 0.5rem;
+  height: 15rem;
+  background: $_color-ac1;
+  transform: translate(-50%, 0);
+  animation: fadeDown 3s ease-in-out 0s infinite normal both;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5rem;
+    width: 5rem;
+    height: 7rem;
+    border-top: solid 7rem rgba( $_color-ac2, .7);
+    border-right: solid 3rem transparent;
+    border-left: solid 3rem transparent;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes fadeDown {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: .7;
+  }
+  70%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: translate( -50%, 10rem);
+  }
+}

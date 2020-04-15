@@ -14,16 +14,20 @@ $_font-size: (
   'xs': 2rem,
   'sm': 2.4rem,
   'md': 3rem,
-  'lg': 3.6rem,
-  'xl': 6rem
+  'lg': 3.2rem,
+  'xl': 3.6rem,
+  'xxl': 4.2rem,
+  'xxxl': 6rem
 ) !default;
 
 $_font-size_SP: (
   'xs': 1.6rem,
   'sm': 2rem,
   'md': 2.4rem,
-  'lg': 2.8rem,
-  'xl':2.1rem
+  'lg': 2.4rem,
+  'xl': 2.8rem,
+  'xxl':3.2rem,
+  'xxxl':2.1rem
 ) !default;
 
 // base font-weight

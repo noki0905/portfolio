@@ -35,32 +35,13 @@ Modifierなしをmedium、変更する場合にはModifierを指定します。
 ```
 */
 .l-section {
+  position: relative;
+  z-index: _z-index('default');
   width: 100%;
   padding: 5rem 0;
 }
 @include _mq-up() {
   .l-section {
     padding: 8rem 0;
-  }
-}
-
-.l-section__copy {
-  color: $_color-ac2;
-  font-size: 2.4rem;
-  font-weight: bold;
-}
-@include _mq-up(){
-  .l-section__copy {
-    font-size: 2.8rem;
-  }
-}
-
-.l-section__p {
-font-size: 1.4rem;
-line-height: 1.5;
-}
-@include _mq-up(){
-  .l-section__p {
-    font-size: 1.6rem;
   }
 }

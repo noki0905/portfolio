@@ -20,9 +20,9 @@ gulp.task('bs-reload', function () {
 });
 
 gulp.task( 'default', gulp.series( gulp.parallel( 'browser-sync' ) ), function() {
-  gulp.watch( './*.html', gulp.task( 'bs-reload' ) );
-  gulp.watch( './css/*.css', gulp.task( 'bs-reload' ) );
-  gulp.watch( './js/*.js', gulp.task( 'bs-reload' ) );
+  gulp.watch( '.*.html', gulp.task( 'bs-reload' ) );
+  gulp.watch( 'assets/css/*.css', gulp.task( 'bs-reload' ) );
+  gulp.watch( 'assets/js/*/*.js', gulp.task( 'bs-reload' ) );
 });
 
 
@@ -53,6 +53,8 @@ gulp.task('minjs', function() {
 var sass = require('gulp-sass');
 var postcss      = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
+var cleanCSS = require("gulp-clean-css");
+var rename   = require("gulp-rename");
 
 gulp.task('sass', function() {
   return gulp.src('assets/css/common.scss')

@@ -1,0 +1,46 @@
+.p-contact {
+
+}
+
+.p-contact__item {
+  display: flex;
+  align-items: center;
+}
+
+.p-contact__ttl {
+
+  @include _fz('sm');
+}
+
+.p-contact__input {
+  &:focus {
+    outline: none;
+  }
+}
+
+.p-contact__button {
+  position: relative;
+  display: inline-block;
+  padding: .8rem 4rem;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: solid .3rem $_color-ac3;
+  border-radius: 2rem;
+  @include _fz('lg');
+  font-weight: $_font-weight-medium;
+  color: $_color-text3;
+  background: $_color-ac3;
+  transition: all $_duration ease-in;
+  cursor: pointer;
+
+  &:hover {
+    color: $_color-ac3;
+    background: $_color-bg1;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

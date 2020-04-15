@@ -1,0 +1,7 @@
+.moon_wrap {
+  position: fixed;
+  // z-index: _z-index('below');
+}
+.moon_body {
+  filter: drop-shadow(10px 10px 10px #FFF);
+}

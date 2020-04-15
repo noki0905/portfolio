@@ -1,0 +1,20 @@
+.p-worksCard {
+  transition: all $_duration ease;
+}
+.p-worksCard__ttl {
+  line-height: 1;
+}
+
+.p-worksCard__img {
+  margin-top: 1.6rem;
+  
+  img {
+    border: solid .3rem $_color-ac1;
+    border-radius: 3rem;
+    object-fit: cover;
+  }
+}
+
+.p-worksCard__cate {
+  margin-top: .8rem; 
+}

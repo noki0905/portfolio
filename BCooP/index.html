@@ -6,33 +6,48 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 
-<!-- <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/image/logo-favicon.svg" type="image/svg"> -->
-<link rel="shortcut icon" href="./assets/image/BCooP_logo.svg" type="image/svg">
-<link rel="favicon" href="./assets/image/BCooP_logo.svg" type="image/svg">
-<link rel="stylesheet" href="./assets/css/common.css">
-<link rel="stylesheet" href="./assets/css/top-page/style.css">
+  <!-- <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/image/logo-favicon.svg" type="image/svg"> -->
+  <link rel="shortcut icon" href="./assets/image/BCooP_logo.svg" type="image/svg">
+  <link rel="favicon" href="./assets/image/BCooP_logo.svg" type="image/svg">
+  <link rel="stylesheet" href="./assets/css/common.min.css">
+  <link rel="stylesheet" href="./assets/css/top-page/style.css">
 
-<!-- fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<!-- jQuery -->
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous">
-</script>
-<script type="text/javascript" src="assets/js/bundle/humberger.js"></script>
-<script type="text/javascript" src="assets/js/bundle/smoothscroll.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+  <!-- fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Quicksand:wght@700&display=swap" rel="stylesheet"> -->
+  <!-- jQuery -->
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+  <script type="text/javascript" src="assets/js/bundle/humberger.js"></script>
+  <script type="text/javascript" src="assets/js/bundle/smoothscroll.js"></script>
+  <script type="text/javascript" src="assets/js/bundle/swiperActive.js"></script>
+  <script type="text/javascript" src="assets/js/bundle/moon.js"></script>
+  <script type="text/javascript" src="assets/js/bundle/formAjax.js"></script>
 </head>
+
 <body>
-  <main>
   <header class="l-header">
+    <svg class="moon_wrap" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100vw 100vh">
+      <circle cx="15rem" cy="15rem" r="10rem" stroke-width="0" stroke="#F5F5F5" fill="#FFFF57" fill-opacity=".7" />
+    </svg>
+    <svg class="moon_wrap" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100vw 100vh">
+      <circle id="moon_hide" cx="18rem" cy="18rem" r="10rem" stroke-width="0" stroke="#00FFFF" fill="#F5F5F5" />
+    </svg>
     <button type="button" id="js-buttonHamburger" class="c-hamburger" aria-controls="global-nav" aria-expanded="false">
       <span class="c-hamburger__line">
         <span class="u-visuallyHidden">
           メニューを開閉する
         </span>
       </span>
-    </button>
+    </button><!-- /.c-hamburger -->
     <nav class="p-globalNav js-globalNav">
       <ul class="p-globalNav__list c-list-unstyled">
         <li class="p-globalNav__item"><a href="" class="p-globalNav__link">HOME</a></li>
@@ -42,8 +57,157 @@
         <li class="p-globalNav__item"><a href="#blog" class="p-globalNav__link">Blog</a></li>
         <li class="p-globalNav__item"><a href="#contact" class="p-globalNav__link">Contact</a></li>
       </ul>
-    </nav>
+    </nav><!-- /.p-globalNav -->
   </header><!-- /.l-header -->
-  section.l-section>div.tp-firstView|c>p.tp-
-</main>
+
+  <main>
+
+  <section class="l-section tp-firstView" style="background-image: url(assets/image/firstView.svg);">
+    <div class="c-wrapper">
+        <p class="tp-firstView__copy u-text-right">
+          I'm Naoki Yoshizawa<br>Web Developer In Japan<br>To Be Yourself At This Moment
+        </p><!-- /.tp-firstView__copy -->
+        <div class="c-arrowDown"></div>
+    </div><!-- /.c-wrapper -->
+  </section><!-- /.l-section .tp-firstView -->
+
+  <section class="l-section tp-aboutMe" id="aboutme">
+    <div class="c-wrapper">
+      <h1 class="c-head1">About Me<span class="c-head1__deco"></span></h1>
+      <div class="tp-aboutMe__wrapper">
+        <div class="tp-aboutMe__img"><img src="assets/image/naoki_yohiszawa.JPG" alt="Naoki Yoshizawa"></div>
+        <div class="tp-aboutMe__left">
+          <h2 class="tp-aboutMe__name">Naoki Yoshizawa</h2>
+          <span class="tp-aboutMe__age">Age 25</span>
+          <p class="tp-aboutMe__info">2015年 長野高専卒業<br>
+            2015-19年 大手メーカーにてFAエンジニア<br>
+            2019年 独学でWEB制作習得、副業としてWEB制作を請け負う<br>
+            2020年 カナダでフロントエンド技術を学習中<br>
+            どこまでも広がる無限の星空を求めて、明日も明後日も歩いていくことを決めたのはいつだったのだ
+            ろうかとむなしく思う。どこまでも広がる無限の星空を求めて、明日も明後日も歩いていくことを決
+            めたのはいつだったのだろうかとむなしく思う。どこまでも広がる無限の星空を求めて、明日も明後
+            日も歩いていくことを決めたのはいつだったのだろうかとむなしく思う。
+          </p>
+        </div>
+      </div><!-- /.tp-aboutMe__wrapper -->
+      <div class="u-text-right">
+        <a href="#wroks" class="c-linkArrow">Works<span class="c-linkArrow__deco"></span></a>
+      </div>
+    </div><!-- /.c-wrapper -->
+  </section><!-- /.tp-aboutMe -->
+
+  <section class="l-section tp-works" id="works">
+    <div class="c-wrapper">
+      <h1 class="c-head1">Works<span class="c-head1__deco"></span></h1>
+      <div class="tp-works__slider swiper-container">
+        <ul class="swiper-wrapper">
+          <li class="tp-works__slide p-worksCard swiper-slide u-text-center">
+            <a href="">
+              <h2 class="p-worksCard__ttl">Portfolio</h2>
+              <div class="p-worksCard__img"><img src="assets/image/BCooP_logo.png" alt=""></div>
+              <p class="p-worksCard__cate">Wordpress/JavaScript</p>
+            </a>
+          </li><!-- /.p-worksCard -->
+          <li class="tp-works__slide p-worksCard swiper-slide u-text-center">
+            <a href="">
+              <h2 class="p-worksCard__ttl">Portfolio</h2>
+              <div class="p-worksCard__img"><img src="assets/image/BCooP_logo.png" alt=""></div>
+              <p class="p-worksCard__cate">Wordpress/JavaScript</p>
+            </a>
+          </li><!-- /.p-worksCard -->
+          <li class="tp-works__slide p-worksCard swiper-slide u-text-center">
+            <a href="">
+              <h2 class="p-worksCard__ttl">Portfolio</h2>
+              <div class="p-worksCard__img"><img src="assets/image/BCooP_logo.png" alt=""></div>
+              <p class="p-worksCard__cate">Wordpress/JavaScript</p>
+            </a>
+          </li><!-- /.p-worksCard -->
+        </ul><!-- /.swiper-wrapper -->
+        <div class="c-pagination swiper-pagination"></div>
+      </div><!-- /.tp-works__slider -->
+      <div class="u-text-right">
+        <a href="" class="c-linkArrow">See All<span class="c-linkArrow__deco"></span></a>
+      </div>
+    </div><!-- /.c-wrapper -->
+  </section><!-- /.tp-works -->
+
+  <section class="l-section tp-survices" id="survices">
+    <div class="c-wrapper">
+      <h1 class="c-head1">Survices<span class="c-head1__deco"></span></h1><!-- /.c-head1 -->
+      <ul class="tp-survices__wrapper">
+        <li class="tp-survices__card p-survicesCard u-text-center">
+          <div class="p-survicesCard__img"></div>
+          <h2 class="p-survicesCard__ttl">コーポレートサイト</h2>
+          <p class="p-survicesCard__info">
+            会社の理念や印象をサイトに反映で
+            きるようなサイト作りをさせていた
+            だきます。リッチスニペットの設定
+            や地図の埋め込みも可能です。
+            また、LPなどもご相談ください。
+          </p>
+        </li><!-- /.tp-survices__card -->
+      </ul><!-- /.tp-survices__wrapper -->
+      <div class="u-text-right">
+        <a href="" class="c-linkArrow">Details<span class="c-linkArrow__deco"></span></a>
+      </div>
+    </div><!-- /.c-wrapper -->
+  </section><!-- /.tp-survices -->
+
+  <section class="l-section tp-blog" id="blog">
+    <div class="c-wrapper">
+      <h1 class="c-head1">Blog<span class="c-head1__deco"></span></h1>
+      <ul class="tp-blog__wrapper">
+        <li class="tp-blog__card p-blogCard">
+          <a href="">
+            <div class="p-blogCard__img"><img src="assets/image/BCooP_logo.png" alt=""></div>
+            <h2 class="p-blogCard__ttl">タイトルタイトルタイトルタイトル</h2>
+          </a>
+        </li><!-- /.tp-blog__card p-blogCard -->
+        <li class="tp-blog__card p-blogCard">
+          <a href="">
+            <div class="p-blogCard__img"><img src="assets/image/BCooP_logo.png" alt=""></div>
+            <h2 class="p-blogCard__ttl">タイトルタイトルタイトルタイトル</h2>
+          </a>
+        </li><!-- /.tp-blog__card p-blogCard -->
+        <li class="tp-blog__card p-blogCard">
+          <a href="">
+            <div class="p-blogCard__img"><img src="assets/image/BCooP_logo.png" alt=""></div>
+            <h2 class="p-blogCard__ttl">タイトルタイトルタイトルタイトル</h2>
+          </a>
+        </li><!-- /.tp-blog__card p-blogCard -->
+      </ul><!-- /.tp-blog__wrapper -->
+      <div class="u-text-right">
+        <a href="" class="c-linkArrow">See All<span class="c-linkArrow__deco"></span></a>
+      </div>
+    </div><!-- /.c-wrapper -->
+  </section><!-- /.tp-blog -->
+
+  <section class="l-section p-contact u-text-center" id="contact">
+    <div class="c-wrapper">
+      <h1 class="p-contact__head">Contact</h1>
+      <form class="p-contact__wrapper" action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSe134U_EOmlh4Gh5_rujKOwkj4gkolubfK-4xUUiKT0kqy06g/formResponse">
+        <div class="p-contact__item">
+          <label class="p-contact__ttl" for="name">Name</label>
+          <input id="name" class="p-contact__input" name="entry.449571119" type="text" required>
+        </div><!-- /.p-contact__item -->
+        <div class="p-contact__item">
+          <label class="p-contact__ttl" for="mail">E-mail</label>
+          <input id="mail" class="p-contact__input" name="entry.528976160" type="email" required>
+        </div><!-- /.p-contact__item -->
+        <div class="p-contact__item">
+          <label class="p-contact__ttl" for="msg">Message</label>
+          <textarea id="msg" class="p-contact__input" name="entry.1517769412" required></textarea>
+        </div><!-- /.p-contact__item -->
+        <button type="submit" class="p-contact__button" name="button" value="submit">Submit</button>
+      </form><!-- /.p-contact__wrapper -->
+    </div><!-- /.c-wrapper -->
+  </section><!-- /#contact.l-section p-contact -->
+
+  </main>
+
+  <footer class="l-footer">
+    <div class="l-footer__logo"><img src="assets/image/BCooP_logo.png" alt="BCooPのロゴ"></div>
+    <p class="l-footer__copyright u-text-center" lang="en">&copy;copyrights 2020 Naoki Yoshizawa All Rights Reserved.</p>
+  </footer>
 </body>
+</html>

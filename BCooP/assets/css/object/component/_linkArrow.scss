@@ -1,0 +1,50 @@
+.c-linkArrow {
+  position: relative;
+  display: inline-block;
+  right: 4rem;
+  padding: 2rem 3rem;
+  border-radius: 2rem;
+  @include _fz('lg');
+  font-weight: $_font-weight-bold;
+  color: $_color-ac1;
+  transition: all $_duration ease;
+
+  &:visited {
+    color: $_color-ac1;
+  }
+  &:hover {
+    color: inherit;
+  }
+}
+
+.c-linkArrow__deco {
+  position: absolute;
+  display: block;
+  right: -4rem;
+  bottom: 3rem;
+  width: 6rem;
+  height: .5rem;
+  border-radius: .25rem;
+  background: $_color-ac1;
+  transition: all $_duration ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: .7rem;
+    right: 0;
+    width: 3rem;
+    height: .5rem;
+    border-radius: .25rem;
+    background: $_color-ac1;
+    transform: rotateZ(30deg);
+  }
+}
+
+.c-linkArrow:hover {
+  box-shadow: inset .7rem .7rem 1rem #c2c2c2, inset -.7rem -.7rem 1rem #ffffff;
+}
+
+.c-linkArrow:hover .c-linkArrow__deco {
+  transform: translateX(50rem);
+}

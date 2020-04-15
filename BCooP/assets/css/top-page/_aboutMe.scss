@@ -1,0 +1,33 @@
+.tp-aboutMe__wrapper {
+  padding: 8rem 0 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.tp-aboutMe__img {
+  flex-basis: 30rem;
+  
+  img {
+    height: 30rem;
+    border: solid .5rem rgba( $_color-ac2, .7);
+    border-radius: 47% 53% 71% 29% / 40% 70% 30% 60%;
+    object-fit: cover;
+  }
+}
+
+.tp-aboutMe__left {
+  flex-basis: 65%;
+}
+
+.tp-aboutMe__name {
+  display: inline-block;
+  margin-right: 4rem;
+}
+
+.tp-aboutMe__age {
+  @include _fz('xs');
+}
+
+.tp-aboutMe__info {
+  margin-top: 2.4rem;
+}

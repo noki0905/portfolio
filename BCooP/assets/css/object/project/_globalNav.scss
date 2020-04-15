@@ -1,61 +1,70 @@
 .p-globalNav {
-    position: absolute;
-    z-index: _z-index('below');
-    display: flex;
-    right: 0;
-    width: 100vw;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: all $_duration ease 0s;
-    background-color: $_color-bg1;
-    color: $_color-text1;
+  position: fixed;
+  z-index: _z-index('below');
+  display: flex;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all $_duration ease 0s;
+  background-color: $_color-bg1;
+  color: $_color-text1;
 }
 
 .is-drawerActive .p-globalNav {
-    z-index: _z-index('fixNav');
-    opacity: 1;
+  z-index: _z-index('fixNav');
+  opacity: 1;
 }
 
 .p-globalNav__list {
-    width: 80%;
-    padding: 2rem 0;
-    border-radius: 3rem;
-    background: $_color-bg1;
-    box-shadow:  1rem 1rem 1rem #c4c4c4, -1rem -1rem 1rem #ffffff;
+  width: 80%;
+  padding: 2rem 0;
+  border-radius: 3rem;
+  background: $_color-bg1;
+  transition: all $_duration ease .8s;
+}
+
+.is-drawerActive .p-globalNav__list {
+  box-shadow:  1rem 1rem 1rem #c4c4c4, -1rem -1rem 1rem #ffffff;
 }
 
 .p-globalNav__item {
-    position: relative;
-    @include _fz(sm);
-    width: 60%;
-    margin: 0 auto;
-    text-align: center;
-    transition: all $_duration ease 0s;
-    
-    &:hover {
-        border-radius: 10rem;
-        box-shadow: inset .7rem .7rem 1rem #c2c2c2, inset -.7rem -.7rem 1rem #ffffff;
-    }
+  position: relative;
+  @include _fz(sm);
+  width: 60%;
+  margin: 0 auto;
+  opacity: 0;
+  text-align: center;
+  transition: all $_duration ease 0s;
+  
+  &:hover {
+    border-radius: 10rem;
+    box-shadow: inset .7rem .7rem 1rem #c2c2c2, inset -.7rem -.7rem 1rem #ffffff;
+  }
 }
 .p-globalNav__item + .p-globalNav__item {
-    margin-top: 2rem;
+  margin-top: 2rem;
+}
+
+.is-drawerActive .p-globalNav__item {
+  opacity: 1;
 }
 
 .p-globalNav__link {
-    display: block;
-    height: 100%;
-    padding: 1rem 0;
-    text-decoration: none;
+  display: block;
+  height: 100%;
+  padding: 1rem 0;
+  text-decoration: none;
 }
 
 @include _mq-up(){
-    .p-globalNav__list {
-        width: 60%;
-        padding: 6rem 0;
-    }
-    .p-globalNav__item + .p-globalNav__item {
-        margin-top: 1rem;
-    }
+  .p-globalNav__list {
+    width: 60%;
+    padding: 6rem 0;
+  }
+  .p-globalNav__item + .p-globalNav__item {
+    margin-top: 1rem;
+  }
 }
