@@ -4,7 +4,7 @@ jQuery(document).ready(function () {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 20,
     speed: 800,
     centeredSlides : true,

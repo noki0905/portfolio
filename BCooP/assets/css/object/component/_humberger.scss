@@ -4,7 +4,7 @@
   top: 2rem;
   right: 2rem;
   width: 5rem;
-  height: 5rem;
+  height: 6rem;
   margin: auto;
   background-color: transparent;
   border: none;
@@ -26,9 +26,10 @@
   bottom: 0;
   left: 0;
   margin: auto;
-  width: 1.8rem;
-  height: .2rem;
-  background-color: $_color-ac1;
+  width: 4rem;
+  height: .5rem;
+  border-radius: .25rem;
+  background-color: rgba( $_color-ac1, .7);
   -webkit-transition: inherit;
           transition: inherit;
 }
@@ -38,16 +39,17 @@
   display: block;
   width: 100%;
   height: 100%;
+  border-radius: .25rem;
   background-color: inherit;
   content: '';
   -webkit-transition: inherit;
           transition: inherit;
 }
 .c-hamburger__line::before {
-  top: -.5rem;
+  top: -1rem;
 }
 .c-hamburger__line::after {
-  top: .5rem;
+  top: 1rem;
 }
 
 .c-hamburger[aria-expanded="true"] .c-hamburger__line {
@@ -91,13 +93,16 @@
     height: 7rem;
   }
   .c-hamburger__line{
-    width: 4rem;
-    height: .4rem;
+    width: 5rem;
+    height: .6rem;
+    border-radius: .3rem;
   }
   .c-hamburger__line::before {
     top: -1.2rem;
+    border-radius: .3rem;
   }
   .c-hamburger__line::after {
     top: 1.2rem;
+    border-radius: .3rem;
   }
 }

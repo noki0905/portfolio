@@ -38,7 +38,7 @@ Modifierなしをmedium、変更する場合にはModifierを指定します。
   position: relative;
   z-index: _z-index('default');
   width: 100%;
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 @include _mq-up() {
   .l-section {

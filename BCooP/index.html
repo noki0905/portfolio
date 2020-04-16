@@ -15,31 +15,18 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 
   <!-- fonts -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Quicksand:wght@700&display=swap" rel="stylesheet"> -->
-  <!-- jQuery -->
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous">
-  </script>
-  <script type="text/javascript" src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
-  <script type="text/javascript" src="assets/js/bundle/humberger.js"></script>
-  <script type="text/javascript" src="assets/js/bundle/smoothscroll.js"></script>
-  <script type="text/javascript" src="assets/js/bundle/swiperActive.js"></script>
-  <script type="text/javascript" src="assets/js/bundle/moon.js"></script>
-  <script type="text/javascript" src="assets/js/bundle/formAjax.js"></script>
+  <script src="https://kit.fontawesome.com/35ebb59adf.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body id="top">
   <header class="l-header">
-    <svg class="moon_wrap" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100vw 100vh">
-      <circle cx="15rem" cy="15rem" r="10rem" stroke-width="0" stroke="#F5F5F5" fill="#FFFF57" fill-opacity=".7" />
+    <svg class="moon_wrap" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+      <circle id="moon_body" stroke-width="0" stroke="#F5F5F5" fill="#FFFF57" fill-opacity=".7" />
     </svg>
-    <svg class="moon_wrap" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100vw 100vh">
-      <circle id="moon_hide" cx="18rem" cy="18rem" r="10rem" stroke-width="0" stroke="#00FFFF" fill="#F5F5F5" />
+    <svg class="moon_wrap" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+      <circle id="moon_hide" stroke-width="0" stroke="#00FFFF" fill="#F5F5F5" />
     </svg>
     <button type="button" id="js-buttonHamburger" class="c-hamburger" aria-controls="global-nav" aria-expanded="false">
       <span class="c-hamburger__line">
@@ -50,10 +37,10 @@
     </button><!-- /.c-hamburger -->
     <nav class="p-globalNav js-globalNav">
       <ul class="p-globalNav__list c-list-unstyled">
-        <li class="p-globalNav__item"><a href="" class="p-globalNav__link">HOME</a></li>
+        <li class="p-globalNav__item"><a href="" class="p-globalNav__link">Home</a></li>
         <li class="p-globalNav__item"><a href="#aboutme" class="p-globalNav__link">About Me</a></li>
+        <li class="p-globalNav__item"><a href="#survice" class="p-globalNav__link">Survice</a></li>
         <li class="p-globalNav__item"><a href="#works" class="p-globalNav__link">Works</a></li>
-        <li class="p-globalNav__item"><a href="#survices" class="p-globalNav__link">Survices</a></li>
         <li class="p-globalNav__item"><a href="#blog" class="p-globalNav__link">Blog</a></li>
         <li class="p-globalNav__item"><a href="#contact" class="p-globalNav__link">Contact</a></li>
       </ul>
@@ -62,10 +49,10 @@
 
   <main>
 
-  <section class="l-section tp-firstView" style="background-image: url(assets/image/firstView.svg);">
+  <section class="l-section tp-firstView">
     <div class="c-wrapper">
         <p class="tp-firstView__copy u-text-right">
-          I'm Naoki Yoshizawa<br>Web Developer In Japan<br>To Be Yourself At This Moment
+          I'm Naoki Yoshizawa<br>Web Developer in Japan<br>To be yourself at this moment
         </p><!-- /.tp-firstView__copy -->
         <div class="c-arrowDown"></div>
     </div><!-- /.c-wrapper -->
@@ -88,13 +75,51 @@
             めたのはいつだったのだろうかとむなしく思う。どこまでも広がる無限の星空を求めて、明日も明後
             日も歩いていくことを決めたのはいつだったのだろうかとむなしく思う。
           </p>
+          <ul class="tp-aboutMe__snsList">
+            <li class="tp-aboutMe__snsItem u-text-center"><a href="https://twitter.com/noki0905" target="_blank" rel=”noopener”><i class="fab fa-twitter"></i></a></li>
+            <li class="tp-aboutMe__snsItem u-text-center"><a href="https://www.facebook.com/noki0905" target="_blank" rel=”noopener”><i class="fab fa-facebook-f"></i></a></li>
+            <li class="tp-aboutMe__snsItem u-text-center"><a href="https://www.instagram.com/noki0905" target="_blank" rel=”noopener”><i class="fab fa-instagram"></i></a></li>
+          </ul>
         </div>
       </div><!-- /.tp-aboutMe__wrapper -->
       <div class="u-text-right">
-        <a href="#wroks" class="c-linkArrow">Works<span class="c-linkArrow__deco"></span></a>
+        <a href="#works" class="c-linkArrow">Works<span class="c-linkArrow__deco"></span></a>
       </div>
     </div><!-- /.c-wrapper -->
   </section><!-- /.tp-aboutMe -->
+
+  <section class="l-section tp-survice" id="survice">
+    <div class="c-wrapper">
+      <h1 class="c-head1">Survice<span class="c-head1__deco"></span></h1><!-- /.c-head1 -->
+      <ul class="tp-survice__wrapper">
+        <li class="tp-survice__card">
+          <div class="tp-survice__img"><img src="assets/image/BCooP_logo.png" alt=""></div>
+          <h2 class="tp-survice__ttl u-text-center">コーディング</h2>
+          <p class="tp-survice__info">
+            LP・コーポレートサイトなどさまざまな形態のサイトコーディングをさせていただきます。<br>
+            オンラインで完結することを求められる中で、コーディングのスキルの習得にお悩みの方、ご相談ください。<br>
+            （今後、フロントエンドに特化していく方針です。）
+          </p>
+        </li><!-- /.tp-survice__card -->
+        <li class="tp-survice__card">
+          <div class="tp-survice__img"><img src="assets/image/BCooP_logo.png" alt=""></div>
+          <h2 class="tp-survice__ttl u-text-center">デザイン</h2>
+          <p class="tp-survice__info">
+            企業・個人問わずお客様の『目的』を理解し、ただ『かっこいい』だけのサイトではなく、成果の上がるサイトを一緒に追求します。<br>
+            迷いを起こさせないユーザビリティの高さ、行動動線を意識したデザインの提案をさせていただきます。
+          </p>
+        </li><!-- /.tp-survice__card -->
+        <li class="tp-survice__card">
+          <div class="tp-survice__img"><img src="assets/image/BCooP_logo.png" alt=""></div>
+          <h2 class="tp-survice__ttl u-text-center">サイト運用</h2>
+          <p class="tp-survice__info">
+            新規サイトを立ち上げる場合、サイト運用も可能です。SEOキーワードの選定、アナリティクスの解析から、軽微なバグの修正、記事の投稿、機能追加など対応致します。<br>
+            リソースが避けなくなった既存のサイトの運用保守もお任せください。
+          </p>
+        </li><!-- /.tp-survice__card -->
+      </ul><!-- /.tp-survice__wrapper -->
+    </div><!-- /.c-wrapper -->
+  </section><!-- /.tp-survice -->
 
   <section class="l-section tp-works" id="works">
     <div class="c-wrapper">
@@ -131,32 +156,10 @@
     </div><!-- /.c-wrapper -->
   </section><!-- /.tp-works -->
 
-  <section class="l-section tp-survices" id="survices">
-    <div class="c-wrapper">
-      <h1 class="c-head1">Survices<span class="c-head1__deco"></span></h1><!-- /.c-head1 -->
-      <ul class="tp-survices__wrapper">
-        <li class="tp-survices__card p-survicesCard u-text-center">
-          <div class="p-survicesCard__img"></div>
-          <h2 class="p-survicesCard__ttl">コーポレートサイト</h2>
-          <p class="p-survicesCard__info">
-            会社の理念や印象をサイトに反映で
-            きるようなサイト作りをさせていた
-            だきます。リッチスニペットの設定
-            や地図の埋め込みも可能です。
-            また、LPなどもご相談ください。
-          </p>
-        </li><!-- /.tp-survices__card -->
-      </ul><!-- /.tp-survices__wrapper -->
-      <div class="u-text-right">
-        <a href="" class="c-linkArrow">Details<span class="c-linkArrow__deco"></span></a>
-      </div>
-    </div><!-- /.c-wrapper -->
-  </section><!-- /.tp-survices -->
-
   <section class="l-section tp-blog" id="blog">
     <div class="c-wrapper">
       <h1 class="c-head1">Blog<span class="c-head1__deco"></span></h1>
-      <ul class="tp-blog__wrapper">
+      <ul class="p-blog__list">
         <li class="tp-blog__card p-blogCard">
           <a href="">
             <div class="p-blogCard__img"><img src="assets/image/BCooP_logo.png" alt=""></div>
@@ -187,16 +190,16 @@
       <h1 class="p-contact__head">Contact</h1>
       <form class="p-contact__wrapper" action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSe134U_EOmlh4Gh5_rujKOwkj4gkolubfK-4xUUiKT0kqy06g/formResponse">
         <div class="p-contact__item">
-          <label class="p-contact__ttl" for="name">Name</label>
+          <label class="p-contact__ttl" for="name">Name<span class="p-contact__ttl--deco u-dn u-di-md"></span></label>
           <input id="name" class="p-contact__input" name="entry.449571119" type="text" required>
         </div><!-- /.p-contact__item -->
         <div class="p-contact__item">
-          <label class="p-contact__ttl" for="mail">E-mail</label>
+          <label class="p-contact__ttl" for="mail">E-mail<span class="p-contact__ttl--deco u-dn u-di-md"></span></label>
           <input id="mail" class="p-contact__input" name="entry.528976160" type="email" required>
         </div><!-- /.p-contact__item -->
         <div class="p-contact__item">
-          <label class="p-contact__ttl" for="msg">Message</label>
-          <textarea id="msg" class="p-contact__input" name="entry.1517769412" required></textarea>
+          <label class="p-contact__ttl" for="msg">Message<span class="p-contact__ttl--deco u-dn u-di-md"></span></label>
+          <textarea id="msg" class="p-contact__input p-contact__input--area" name="entry.1517769412" required></textarea>
         </div><!-- /.p-contact__item -->
         <button type="submit" class="p-contact__button" name="button" value="submit">Submit</button>
       </form><!-- /.p-contact__wrapper -->
@@ -206,8 +209,33 @@
   </main>
 
   <footer class="l-footer">
-    <div class="l-footer__logo"><img src="assets/image/BCooP_logo.png" alt="BCooPのロゴ"></div>
-    <p class="l-footer__copyright u-text-center" lang="en">&copy;copyrights 2020 Naoki Yoshizawa All Rights Reserved.</p>
+    <a href="#top" class="c-topLink"></a>
+    <div class="c-wrapper">
+      <nav class="l-footer__nav">
+        <ul class="l-footer__list u-text-center">
+          <li class="l-footer__item"><a href="#top" class="l-footer__link l-footer__link1">Home</a></li>
+          <li class="l-footer__item"><a href="#aboutme" class="l-footer__link l-footer__link1">About Me</a></li>
+          <li class="l-footer__item"><a href="#survice" class="l-footer__link">Survice</a></li>
+          <li class="l-footer__item"><a href="#works" class="l-footer__link">Works</a></li>
+          <li class="l-footer__item"><a href="#contact" class="l-footer__link">Contact</a></li>
+        </ul><!-- /.l-footer__list -->
+      </nav><!-- /.l-footer__nav -->
+      <div class="l-footer__logo"><img src="assets/image/BCooP_logo.png" alt="BCooPのロゴ"></div>
+    </div>
+    <p class="l-footer__copyright u-text-center" lang="en">&copy;copyrights 2020<br class="u-dn-md"> Naoki Yoshizawa All Rights Reserved.</p>
   </footer>
 </body>
+<!-- jQuery -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+</script>
+<script type="text/javascript" src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+<script type="text/javascript" src="assets/js/bundle/humberger.js"></script>
+<script type="text/javascript" src="assets/js/bundle/smoothscroll.js"></script>
+<script type="text/javascript" src="assets/js/bundle/swiperActive.js"></script>
+<script type="text/javascript" src="assets/js/bundle/moon.js"></script>
+<script type="text/javascript" src="assets/js/bundle/formAjax.js"></script>
 </html>

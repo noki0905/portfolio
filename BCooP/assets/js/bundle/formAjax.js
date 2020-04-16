@@ -1,9 +1,6 @@
 jQuery.ajax({
   url: "https://docs.google.com/forms/u/2/d/e/1FAIpQLSe134U_EOmlh4Gh5_rujKOwkj4gkolubfK-4xUUiKT0kqy06g/formResponse",
-  // data: {"entry.449571119": name, "entry.449571119": name, "entry.151776941": name},
-  data: {"entry.449571119": name},
-  // data: {"entry.528976160": name},
-  // data: {"entry.151776941": name},
+  data: {"entry.449571119": name, "entry.449571119": name, "entry.151776941": name},
   type: "POST",
   dataType: "xml",
   statusCode: {

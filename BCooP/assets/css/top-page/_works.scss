@@ -2,13 +2,16 @@
   
 }
 .swiper-container.tp-works__slider {
+  margin: 0 -2rem;
   padding: 8rem 0;
 }
 
-.tp-works__slide {
-  transform: scale(.9);
-}
-
-.swiper-slide-active.tp-works__slide {
-  transform: scale(1.2);
+@include _mq-up(){
+  .tp-works__slide {
+    transform: scale(.9);
+  }
+  
+  .swiper-slide-active.tp-works__slide {
+    transform: scale(1.2);
+  }
 }

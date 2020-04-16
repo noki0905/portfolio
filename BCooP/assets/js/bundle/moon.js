@@ -1,31 +1,63 @@
 //スクロール状態。0で一番上、1で一番下
-var scrollPos = 0;
+let scrollPos = 0;
 //スクロールできる = 画面から隠れてる範囲
-var scrollRange;
+let scrollRange;
+//ルート要素のフォントサイズ取得
+let fontSize;
+//SP表示切り替えフラグ
+let mdFlag = false;
+//月の半径
+let moonSize = 12;
+//月の位置
+let moonPos = 16;
+//月影の位置
+let moonHidePos = 19;         
+//月の欠け係数
+let moonLack = 16;
 
-$( document ).ready(function() {
-  $(function() {
-    $(window).scroll(function(){
-      scrollRange = $(document.body).height() - $(this).outerHeight();
-      scrollPos = $(this).scrollTop() / scrollRange;
-      const circle = $('#moon_hide');
 
-      console.log(scrollPos);
+jQuery(window).on('load resize', function(){
+  mdFlag = ( window.matchMedia('(max-width:767px)').matches );
+  if( mdFlag ) {
+    moonSize = 6;
+    moonPos = 8;
+    moonHidePos = 10;
+    moonLack = 8;
+  }
+} );
 
-      let cxSet = 100 + 7/scrollPos;
-      let cySet = 100 + 5/scrollPos;
-      const setAttr = { cx:cxSet, cy:cySet };
+jQuery( document ).ready(function() {
+  jQuery(function() {
+    fontSize = parseFloat( getComputedStyle(document.documentElement).fontSize );
 
-      if ( !(scrollPos) ) {
-        circle.hide();
-      }else if ( scrollPos < 1 ) {
+    moonSize = moonSize * fontSize;
+    moonPos = moonPos * fontSize;
+    moonHidePos = moonHidePos * fontSize;
+    moonLack = moonLack * fontSize;
+
+    const body = jQuery('#moon_body');
+    const circle = jQuery('#moon_hide');
+
+    const setAttrBody = { cx:moonPos, cy:moonPos, r:moonSize }
+    const setAttrCircle = { cx:moonHidePos, cy:moonHidePos, r:moonSize }
+    body.attr(setAttrBody);
+    circle.attr(setAttrCircle);
+    
+    jQuery(window).scroll(function(){
+      scrollRange = jQuery(document.body).height() - jQuery(this).outerHeight();
+      scrollPos = jQuery(this).scrollTop() / scrollRange;
+
+      let cxSet = moonHidePos + moonLack * scrollPos;
+      let cySet = moonHidePos + moonLack * scrollPos;
+      const setAttrMove = { cx:cxSet, cy:cySet };
+
+      if ( scrollPos ) {
         circle.show();
-        circle.attr(setAttr);
-      }else {
-        cxSet = 100;
-        cySet = 100;
-        const setAttr = { cx:cxSet, cy:cySet, r:79 };
-        circle.attr(setAttr);
+        circle.attr(setAttrMove);
+      }
+      if ( scrollPos >= 0.999 ) {
+        const setAttrRed = { fill:"#D90000"};
+        body.attr(setAttrRed);
       }
     });
   });

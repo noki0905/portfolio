@@ -9,12 +9,21 @@
   margin-top: 1.6rem;
   
   img {
+    width: 100%;
     border: solid .3rem $_color-ac1;
-    border-radius: 3rem;
-    object-fit: cover;
+    border-radius: 1.6rem;
+    object-fit: contain;
   }
 }
 
 .p-worksCard__cate {
   margin-top: .8rem; 
+}
+
+@include _mq-up(){
+  .p-worksCard__img {
+    img {
+      border-radius: 3rem;
+    }
+  }
 }

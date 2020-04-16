@@ -71,10 +71,17 @@ gulp.task('top', function() {
     .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest('assets/css/top-page'));
 });
+gulp.task('single', function() {
+  return gulp.src('assets/css/single/style.scss')
+    .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(postcss([autoprefixer()]))
+    .pipe(gulp.dest('assets/css/single'));
+});
 
 
 //自動コンパイル
 gulp.task( 'watch', function() {
   gulp.watch( 'assets/css/**/**.scss', gulp.task( 'sass' ) );
   gulp.watch( 'assets/css/**/*.scss', gulp.task( 'top' ) );
+  gulp.watch( 'assets/css/**/*.scss', gulp.task( 'single' ) );
 });

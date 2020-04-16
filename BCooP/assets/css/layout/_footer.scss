@@ -27,4 +27,67 @@ categories: [layout]
 </body>
 ```
 */
-.l-footer {}
+.l-footer {
+  position: relative;
+  z-index: _z-index('default');
+  padding: 2rem 0 2rem;
+}
+
+.l-footer__nav {
+  padding: 4rem 0 0;
+}
+
+.l-footer__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+  border-radius: 3rem;
+  box-shadow:  5px 5px 10px #c2c2c2, -5px -5px 10px #ffffff;
+}
+
+.l-footer__item {
+  display: inline-block;
+  width: auto;
+  margin: 0 auto;
+  border-radius: 3rem;
+  @include _fz('sm');
+  transition: all $_duration ease;
+  
+  &:hover {
+    box-shadow: inset 5px 5px 10px #c2c2c2, inset -5px -5px 10px #ffffff;
+  }
+  
+  a{
+    display: block;
+    padding: 1rem 3rem;
+  }
+}
+
+.l-footer__logo {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.l-footer__copyright {
+  margin-top: 2rem;
+}
+
+@include _mq-up(){
+  .l-footer {
+    padding-top: 8rem;
+  }
+
+  .l-footer__list {
+    flex-direction: row;
+  }
+
+  .l-footer__item {
+    display: inline-block;
+    width: auto;
+  }
+
+  .l-footer__logo {
+    width: 50%;
+  }
+}

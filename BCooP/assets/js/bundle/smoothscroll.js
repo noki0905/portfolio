@@ -7,7 +7,7 @@
 // jQuery( document ).ready(function() {
 //   jQuery(function(){
 //     //*ページ内リンクの指定
-//     jQuery('a[href^=#]').click(function(){
+//     jQuery('a[href^="#"]').click(function(){
 //         var href= jQuery(this).attr("href");
 //         var target = jQuery(href == "#" || href == "" ? 'body' : href);
 //         var position = target.offset().top-headerHight;
@@ -28,63 +28,25 @@
 //   });
 // });
 
-//移動時間（1 = 1000分の1秒（1ミリ秒））
-const move_time = 500;
+// aタグ要素の参照を取得
+const links = document.querySelectorAll('a[href^="#"]');
 
-//繰り返す回数（アニメーションの回数）の計算
-const end_time = move_time / 1000 * 60;
+// 各aタグにクリックイベントを設定
+for ( let i = 0; i < links.length; i++ ) {
+  links[i].addEventListener('click', (e) => {
+    // デフォルトのイベントをキャンセル
+    e.preventDefault();
 
-//イージング計算式（ easeInOutQua ）
-const easing = function ( t, b, c, d) {
-  if ((t/=d/2) < 1) return c/2*t*t + b;
-  return -c/2 * ((--t)*(t-2) - 1) + b;
-};
+    // 対象（aタグ）のY軸の絶対座標を取得
+    const elemY = document.querySelector(links[i].attributes[0].nodeValue).getBoundingClientRect().top;
+    // 現在のスクロール量を取得
+    const scrollY = window.pageYOffset;
+    // 対象までのスクロール量を算出
+    const top = elemY + scrollY;
 
-//移動関数（アニメーション実行関数）
-function pageScroll( pos ){
-  let xPos = window.pageXOffset
-    , yPos = window.pageYOffset
-    , moved = pos - yPos
-    , time = 1;
-  (function scrollMoved() {
-      window.scrollTo( xPos, easing( time, yPos, moved, end_time) );
-      time ++ ;
-      if ( time <= end_time ) {
-        window.requestAnimationFrame( scrollMoved );
-      }
-  })();
-};
-
-//ハッシュからエレメントを取得する関数
-function getElm( h ){
-    let deCode = decodeURI( h );
-    return document.querySelector( deCode + ',a[name="' + deCode.substr(1)  + '"]');
-}
-
-//移動先の位置を取得する関数
-function getPos( t ){
-  let tPos = t.getBoundingClientRect()
-  return tPos.top + window.pageYOffset;
-};
-
-//ページ内リンクを取得
-const entryPageLinks = document.querySelectorAll( 'a[href^="#"]' );
-
-//ページ内リンクにイベント登録
-if ( entryPageLinks.length ) {
-  for( var i = 0; entryPageLinks.length > i; i++ ) {
-    entryPageLinks[i].addEventListener( 'click', function(e){
-
-      let href = e.target.hash;
-      if ( ( href != '' ) && ( href != '#') ) {
-        let targetElm = getElm( href );
-        if ( targetElm ) {
-           ( e.preventDefault ) ? e.preventDefault(): e.returnValue = false;
-           pageScroll( getPos( targetElm ) );
-           return false;
-        }
-      }
-
+    window.scroll({
+      top: top, // スクロール量の設定
+      behavior: 'smooth' // スクロール動作の設定
     });
-  }
+  });
 }

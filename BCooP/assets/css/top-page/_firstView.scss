@@ -7,11 +7,18 @@
   background-position: 0 10%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 0 10rem;
+  background-position: center;
+  background-image: url(#{$_imgDir}firstView_sp.svg);
 }
 
 .tp-firstView__copy {
   padding-top: 5rem;
   color: $_color-ac1;
   @include _fz('xxxl');
+}
+
+@include _mq-up(){
+  .tp-firstView {
+    background-image: url(#{$_imgDir}firstView.svg);
+  }
 }
