@@ -77,6 +77,12 @@ gulp.task('single', function() {
     .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest('assets/css/single'));
 });
+gulp.task('archive', function() {
+  return gulp.src('assets/css/archive/style.scss')
+    .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(postcss([autoprefixer()]))
+    .pipe(gulp.dest('assets/css/archive'));
+});
 
 
 //自動コンパイル
@@ -84,4 +90,5 @@ gulp.task( 'watch', function() {
   gulp.watch( 'assets/css/**/**.scss', gulp.task( 'sass' ) );
   gulp.watch( 'assets/css/**/*.scss', gulp.task( 'top' ) );
   gulp.watch( 'assets/css/**/*.scss', gulp.task( 'single' ) );
+  gulp.watch( 'assets/css/**/*.scss', gulp.task( 'archive' ) );
 });

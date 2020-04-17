@@ -9,7 +9,8 @@
   bottom: 0;
   left: 0;
   width: 130%;
-  height: 0.5rem;
+  height: .5rem;
+  border-radius: .25rem;
   background: $_color-ac1;
 
   &::before, &::after {

@@ -151,15 +151,14 @@
   padding: 8rem 0;
 }
 
-@media screen and (min-width: 768px) {
-  .tp-work__slide {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  .swiper-slide-active.tp-work__slide {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
+.tp-work__slide {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.swiper-slide-active.tp-work__slide {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .tp-survice__wrapper {

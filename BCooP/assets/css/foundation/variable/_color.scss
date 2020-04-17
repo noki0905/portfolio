@@ -1,6 +1,6 @@
 // base color
-$_color-text1: #3B3B3B !default;
-$_color-text2: #444444 !default;
+$_color-text1: #494949 !default;
+$_color-text2: #707070 !default;
 $_color-text3: #ffffff !default;
 // $_color-ac1: #0C104D !default;
 $_color-ac1: #366B95 !default;
@@ -15,8 +15,7 @@ $_color-border: #333333 !default;
 // $_color-link: #2b70ba !default;
 $_color-link: $_color-text1 !default;
 $_color-link--visited: 'inherit' !default;
-$_color-link--hover: 'inherit' !default;
-// $_color-link--hover: lighten($_color-link, 30%) !default;
+$_color-link--hover: lighten($_color-link, 30%) !default;
 
 // component color
 $_color-ui-border: #ddd !default;

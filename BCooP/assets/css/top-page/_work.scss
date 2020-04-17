@@ -6,12 +6,10 @@
   padding: 8rem 0;
 }
 
-@include _mq-up(){
-  .tp-work__slide {
-    transform: scale(.9);
-  }
-  
-  .swiper-slide-active.tp-work__slide {
-    transform: scale(1.2);
-  }
+.tp-work__slide {
+  transform: scale(.9);
+}
+
+.swiper-slide-active.tp-work__slide {
+  transform: scale(1.2);
 }

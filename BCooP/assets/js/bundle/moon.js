@@ -7,29 +7,31 @@ let fontSize;
 //SP表示切り替えフラグ
 let mdFlag = false;
 //月の半径
-let moonSize = 12;
+let moonSize;
 //月の位置
-let moonPos = 16;
+let moonPos;
 //月影の位置
-let moonHidePos = 19;         
+let moonHidePos;         
 //月の欠け係数
-let moonLack = 16;
-
-
-jQuery(window).on('load resize', function(){
-  mdFlag = ( window.matchMedia('(max-width:767px)').matches );
-  if( mdFlag ) {
-    moonSize = 6;
-    moonPos = 8;
-    moonHidePos = 10;
-    moonLack = 8;
-  }
-} );
+let moonLack;
 
 jQuery( document ).ready(function() {
   jQuery(function() {
-    fontSize = parseFloat( getComputedStyle(document.documentElement).fontSize );
+    mdFlag = ( window.matchMedia('(max-width:767px)').matches );
 
+    if( mdFlag ) {
+      moonSize = 6;
+      moonPos = 8;
+      moonHidePos = 10;
+      moonLack = 8;
+    } else {
+      moonSize = 12;
+      moonPos = 16;
+      moonHidePos = 19;
+      moonLack = 16;
+    }
+
+    fontSize = parseFloat( getComputedStyle(document.documentElement).fontSize );
     moonSize = moonSize * fontSize;
     moonPos = moonPos * fontSize;
     moonHidePos = moonHidePos * fontSize;

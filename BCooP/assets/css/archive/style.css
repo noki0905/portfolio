@@ -1,0 +1,67 @@
+.ar-ttl {
+  font-size: 3.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .ar-ttl {
+    font-size: 4.2rem;
+  }
+}
+
+.ar-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  padding: 4rem 0 0rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .ar-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 8rem 0 2.4rem;
+  }
+}
+
+.ar-work__card {
+  width: 100%;
+}
+
+.ar-work__card:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.ar-work__card + .ar-work__card {
+  margin-top: 3.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .ar-work__card {
+    width: 30%;
+    margin-bottom: 5.6rem;
+  }
+  .ar-work__card:nth-of-type(3n + 1) {
+    margin-left: 0 !important;
+  }
+  .ar-work__card + .ar-work__card {
+    margin-top: 0;
+    margin-left: 5%;
+  }
+}

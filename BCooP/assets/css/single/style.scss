@@ -4,7 +4,133 @@
 
 
 @import "../_single";
-@import "./_firstView";
-@import "./_aboutMe";
-@import "./_works";
-@import "./_survice";
+
+.si-article {
+  padding: 3.2rem .8rem;
+}
+@include _mq-up(){
+  .si-article {
+    padding: 3.2rem 10%;
+    border-radius: 1.6rem;
+    border: .3rem solid $_color-ac1;
+  }
+}
+
+.si-ttl {
+  @include _fz('xxl');
+}
+
+.si-article__img {
+  width: 100%;
+  margin-top: 1rem;
+}
+@include _mq-up(){
+  .si-article__img {
+    margin-top: 1.6rem;
+  }
+}
+
+.si-article__cate {
+  margin-top: 1rem;
+  @include _fz('xs');
+  color: $_color-text2;
+}
+@include _mq-up(){
+  .si-article__cate {
+    margin-top: 2.4rem;
+  }
+}
+
+.si-article__content {
+  border-top: .3rem solid $_color-ac1;
+  p {
+    margin: 1.6rem 0;
+    line-height: 1.5;
+    font-size: 1.6rem;
+  }
+
+  img {
+    max-width: 90%;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    margin: 1.6rem 0;
+    color: $_color-ac1;
+    line-height: 1.5;
+  }
+  h1,h2 {
+    position: relative;
+    display: block;
+    margin: 2.4rem;
+    @include _fz('xl');
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.5rem;
+      border-radius: .25rem;
+      background: $_color-ac1;
+    }
+  
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -.3rem;
+      right: 0%;
+      border: solid .5rem $_color-ac1;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      transform: translate(.75rem, -.3rem);
+    }
+  }
+  h3 {
+    position: relative;
+    padding-left: 1.6rem;
+    @include _fz('lg');
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: .8rem;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background: $_color-ac1;
+    }
+  }
+  h4, h5 {
+    position: relative;
+    display: inline-block;
+    @include _fz('md');
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: .3rem;
+      border-radius: .15rem;
+      background: $_color-ac1;
+    }
+  }
+}
+
+@include _mq-up(){
+  .si-article__content {
+    h1,h2,h3,h4,h5,h6 {
+      margin: 2.4rem 0;
+      color: $_color-ac1;
+      line-height: 1.5;
+    }
+    p{
+      margin: 2.4rem;
+    }
+  }
+
+}

@@ -9,8 +9,6 @@
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/image/BCooP_logo.svg" type="image/svg">
   <link rel="favicon" href="<?php echo get_template_directory_uri(); ?>/assets/image/BCooP_logo.svg" type="image/svg">
 
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/common.min.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/top-page/style.css">
   <!-- fonts -->
   <script src="https://kit.fontawesome.com/35ebb59adf.js" crossorigin="anonymous"></script>
 

@@ -536,7 +536,7 @@ html {
 }
 
 body {
-  color: #3B3B3B;
+  color: #494949;
   font-family: "Nunito", "Noto Sans JP", sans-serif;
   font-weight: 400;
   /* アンチエイリアスを指定する */
@@ -622,6 +622,8 @@ th {
 a {
   text-decoration: none;
   color: inherit;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease;
 }
 
 a:visited {
@@ -630,7 +632,7 @@ a:visited {
 
 a:hover, a:active, a:focus {
   text-decoration: none;
-  color: "inherit";
+  color: #969696;
 }
 
 /**
@@ -795,7 +797,7 @@ categories: [layout]
   width: auto;
   margin: 0 auto;
   border-radius: 3rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
 }
@@ -3079,13 +3081,13 @@ Modifierは以下のとおりです。
 }
 
 .c-na {
-  margin: 8rem 0;
-  font-size: 2rem;
+  width: 100%;
+  font-size: 2.4rem;
 }
 
 @media screen and (min-width: 768px) {
   .c-na {
-    font-size: 2.4rem;
+    font-size: 3.2rem;
   }
 }
 
@@ -3143,7 +3145,7 @@ Modifierは以下のとおりです。
   width: 4rem;
   height: .5rem;
   border-radius: .25rem;
-  background-color: rgba(54, 107, 149, 0.7);
+  background-color: #366B95;
   -webkit-transition: inherit;
   transition: inherit;
 }
@@ -3309,7 +3311,8 @@ Modifierは以下のとおりです。
   bottom: 0;
   left: 0;
   width: 130%;
-  height: 0.5rem;
+  height: .5rem;
+  border-radius: .25rem;
   background: #366B95;
 }
 
@@ -3610,7 +3613,7 @@ Modifierは以下のとおりです。
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
-  color: #3B3B3B;
+  color: #494949;
   background-color: #FFFF57;
 }
 
@@ -3707,7 +3710,7 @@ categories: [project]
   line-height: 1;
   text-align: center;
   white-space: nowrap;
-  background-color: #3B3B3B;
+  background-color: #494949;
 }
 
 /* #Badge
@@ -3739,7 +3742,7 @@ categories: [project]
   text-align: center;
   vertical-align: top;
   white-space: nowrap;
-  background-color: #3B3B3B;
+  background-color: #494949;
 }
 
 /* #Box
@@ -3975,7 +3978,7 @@ categories: [project]
   -webkit-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
   background-color: #F5F5F5;
-  color: #3B3B3B;
+  color: #494949;
 }
 
 .is-drawerActive .p-globalNav {
@@ -3999,7 +4002,7 @@ categories: [project]
 
 .p-globalNav__item {
   position: relative;
-  font-size: 2rem;
+  font-size: 1.8rem;
   width: 60%;
   margin: 0 auto;
   opacity: 0;
@@ -4212,7 +4215,7 @@ categories: [project]
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -4374,7 +4377,9 @@ categories: [project]
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 8rem 0 6rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 8rem 0 0rem;
   }
 }
 
@@ -4393,20 +4398,12 @@ categories: [project]
           animation: shadowinset 0.8s ease-in-out 0s normal both;
 }
 
-.p-blogCard a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.p-blogCard + .p-blogCard {
+  margin-top: 3.2rem;
 }
 
 .p-blogCard__img {
-  width: 60%;
+  width: 100%;
 }
 
 .p-blogCard__img img {
@@ -4415,19 +4412,15 @@ categories: [project]
      object-fit: cover;
 }
 
-.p-blogCard + .p-blogCard {
-  margin-top: 3.2rem;
-}
-
 .p-blogCard__ttl {
   padding: 2rem;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 
 @media screen and (min-width: 768px) {
   .p-blogCard__ttl {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 }
 
@@ -4472,20 +4465,15 @@ categories: [project]
 @media screen and (min-width: 768px) {
   .p-blogCard {
     width: 30%;
-    margin-right: 5%;
+    margin-bottom: 5.6rem;
     border-radius: 3rem;
   }
-  .p-blogCard:nth-of-type(3n) {
-    margin-right: 0;
-  }
-  .p-blogCard a {
-    display: block;
+  .p-blogCard:nth-of-type(3n + 1) {
+    margin-left: 0 !important;
   }
   .p-blogCard + .p-blogCard {
     margin-top: 0;
-  }
-  .p-blogCard__img {
-    width: 100%;
+    margin-left: 5%;
   }
   .p-blogCard__img img {
     border-radius: 3rem 3rem 0 0;
