@@ -14,7 +14,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../../image/firstView_sp.svg);
+  background-image: url(https://bcoop.tech/wp-content/themes/BCooP/assets/image/firstView_sp.svg);
 }
 
 .tp-firstView__copy {
@@ -31,7 +31,7 @@
 
 @media screen and (min-width: 768px) {
   .tp-firstView {
-    background-image: url(../../image/firstView.svg);
+    background-image: url(https://bcoop.tech/wp-content/themes/BCooP/assets/image/firstView.svg);
   }
 }
 
@@ -146,17 +146,17 @@
   }
 }
 
-.swiper-container.tp-works__slider {
+.swiper-container.tp-work__slider {
   margin: 0 -2rem;
   padding: 8rem 0;
 }
 
 @media screen and (min-width: 768px) {
-  .tp-works__slide {
+  .tp-work__slide {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
-  .swiper-slide-active.tp-works__slide {
+  .swiper-slide-active.tp-work__slide {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
   }

@@ -1,9 +1,3 @@
 .c-na {
-    margin: 8rem 0;
-    font-size: 2rem;
-}
-@include _mq-up(){
-    .c-na {
-        font-size: 2.4rem;
-    }
+    @include _fz('lg');
 }

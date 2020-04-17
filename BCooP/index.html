@@ -23,10 +23,10 @@
 <body id="top">
   <header class="l-header">
     <svg class="moon_wrap" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-      <circle id="moon_body" stroke-width="0" stroke="#F5F5F5" fill="#FFFF57" fill-opacity=".7" />
+      <circle id="moon_body" cx="16rem" cy="16rem" r="12rem" stroke-width="0" stroke="#F5F5F5" fill="#FFFF57" fill-opacity=".7" />
     </svg>
     <svg class="moon_wrap" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-      <circle id="moon_hide" stroke-width="0" stroke="#00FFFF" fill="#F5F5F5" />
+      <circle id="moon_hide" cx="19rem" cy="19rem" r="12rem" stroke-width="0" stroke="#00FFFF" fill="#F5F5F5" />
     </svg>
     <button type="button" id="js-buttonHamburger" class="c-hamburger" aria-controls="global-nav" aria-expanded="false">
       <span class="c-hamburger__line">
@@ -40,7 +40,7 @@
         <li class="p-globalNav__item"><a href="" class="p-globalNav__link">Home</a></li>
         <li class="p-globalNav__item"><a href="#aboutme" class="p-globalNav__link">About Me</a></li>
         <li class="p-globalNav__item"><a href="#survice" class="p-globalNav__link">Survice</a></li>
-        <li class="p-globalNav__item"><a href="#works" class="p-globalNav__link">Works</a></li>
+        <li class="p-globalNav__item"><a href="#work" class="p-globalNav__link">Work</a></li>
         <li class="p-globalNav__item"><a href="#blog" class="p-globalNav__link">Blog</a></li>
         <li class="p-globalNav__item"><a href="#contact" class="p-globalNav__link">Contact</a></li>
       </ul>
@@ -50,6 +50,7 @@
   <main>
 
   <section class="l-section tp-firstView">
+    <h1 class="u-visuallyHidden">Portfolio of Naoki Yoshizawa</h1>
     <div class="c-wrapper">
         <p class="tp-firstView__copy u-text-right">
           I'm Naoki Yoshizawa<br>Web Developer in Japan<br>To be yourself at this moment
@@ -66,14 +67,15 @@
         <div class="tp-aboutMe__left">
           <h2 class="tp-aboutMe__name">Naoki Yoshizawa</h2>
           <span class="tp-aboutMe__age">Age 25</span>
-          <p class="tp-aboutMe__info">2015年 長野高専卒業<br>
+          <p class="tp-aboutMe__info">
+            長野県に生まれ長野県に育ちました。<br>
+            『自分らしくあること』が一番の幸福である。<br>
+            自分らしくいられる場所を一緒に作りたいです。<br>
+            自然と服と人が好き。<br><br>
+            2015年 長野高専卒業<br>
             2015-19年 大手メーカーにてFAエンジニア<br>
-            2019年 独学でWEB制作習得、副業としてWEB制作を請け負う<br>
-            2020年 カナダでフロントエンド技術を学習中<br>
-            どこまでも広がる無限の星空を求めて、明日も明後日も歩いていくことを決めたのはいつだったのだ
-            ろうかとむなしく思う。どこまでも広がる無限の星空を求めて、明日も明後日も歩いていくことを決
-            めたのはいつだったのだろうかとむなしく思う。どこまでも広がる無限の星空を求めて、明日も明後
-            日も歩いていくことを決めたのはいつだったのだろうかとむなしく思う。
+            2020年 フリーランスWEB製作者<br>
+            2020年 カナダでフロントエンド技術を学習中(のはずでした)<br>
           </p>
           <ul class="tp-aboutMe__snsList">
             <li class="tp-aboutMe__snsItem u-text-center"><a href="https://twitter.com/noki0905" target="_blank" rel=”noopener”><i class="fab fa-twitter"></i></a></li>
@@ -83,7 +85,7 @@
         </div>
       </div><!-- /.tp-aboutMe__wrapper -->
       <div class="u-text-right">
-        <a href="#works" class="c-linkArrow">Works<span class="c-linkArrow__deco"></span></a>
+        <a href="#work" class="c-linkArrow">work<span class="c-linkArrow__deco"></span></a>
       </div>
     </div><!-- /.c-wrapper -->
   </section><!-- /.tp-aboutMe -->
@@ -121,40 +123,40 @@
     </div><!-- /.c-wrapper -->
   </section><!-- /.tp-survice -->
 
-  <section class="l-section tp-works" id="works">
+  <section class="l-section tp-work" id="work">
     <div class="c-wrapper">
-      <h1 class="c-head1">Works<span class="c-head1__deco"></span></h1>
-      <div class="tp-works__slider swiper-container">
+      <h1 class="c-head1">work<span class="c-head1__deco"></span></h1>
+      <div class="tp-work__slider swiper-container">
         <ul class="swiper-wrapper">
-          <li class="tp-works__slide p-worksCard swiper-slide u-text-center">
+          <li class="tp-work__slide p-workCard swiper-slide u-text-center">
             <a href="">
-              <h2 class="p-worksCard__ttl">Portfolio</h2>
-              <div class="p-worksCard__img"><img src="assets/image/BCooP_logo.png" alt=""></div>
-              <p class="p-worksCard__cate">Wordpress/JavaScript</p>
+              <h2 class="p-workCard__ttl">Portfolio</h2>
+              <div class="p-workCard__img"><img src="assets/image/BCooP_logo.png" alt=""></div>
+              <p class="p-workCard__cate">Wordpress/JavaScript</p>
             </a>
-          </li><!-- /.p-worksCard -->
-          <li class="tp-works__slide p-worksCard swiper-slide u-text-center">
+          </li><!-- /.p-workCard -->
+          <li class="tp-work__slide p-workCard swiper-slide u-text-center">
             <a href="">
-              <h2 class="p-worksCard__ttl">Portfolio</h2>
-              <div class="p-worksCard__img"><img src="assets/image/BCooP_logo.png" alt=""></div>
-              <p class="p-worksCard__cate">Wordpress/JavaScript</p>
+              <h2 class="p-workCard__ttl">Portfolio</h2>
+              <div class="p-workCard__img"><img src="assets/image/BCooP_logo.png" alt=""></div>
+              <p class="p-workCard__cate">Wordpress/JavaScript</p>
             </a>
-          </li><!-- /.p-worksCard -->
-          <li class="tp-works__slide p-worksCard swiper-slide u-text-center">
+          </li><!-- /.p-workCard -->
+          <li class="tp-work__slide p-workCard swiper-slide u-text-center">
             <a href="">
-              <h2 class="p-worksCard__ttl">Portfolio</h2>
-              <div class="p-worksCard__img"><img src="assets/image/BCooP_logo.png" alt=""></div>
-              <p class="p-worksCard__cate">Wordpress/JavaScript</p>
+              <h2 class="p-workCard__ttl">Portfolio</h2>
+              <div class="p-workCard__img"><img src="assets/image/BCooP_logo.png" alt=""></div>
+              <p class="p-workCard__cate">Wordpress/JavaScript</p>
             </a>
-          </li><!-- /.p-worksCard -->
+          </li><!-- /.p-workCard -->
         </ul><!-- /.swiper-wrapper -->
         <div class="c-pagination swiper-pagination"></div>
-      </div><!-- /.tp-works__slider -->
+      </div><!-- /.tp-work__slider -->
       <div class="u-text-right">
         <a href="" class="c-linkArrow">See All<span class="c-linkArrow__deco"></span></a>
       </div>
     </div><!-- /.c-wrapper -->
-  </section><!-- /.tp-works -->
+  </section><!-- /.tp-work -->
 
   <section class="l-section tp-blog" id="blog">
     <div class="c-wrapper">
@@ -212,16 +214,17 @@
     <a href="#top" class="c-topLink"></a>
     <div class="c-wrapper">
       <nav class="l-footer__nav">
-        <ul class="l-footer__list u-text-center">
+        <ul class="l-footer__list u-dn u-db-md u-text-center">
           <li class="l-footer__item"><a href="#top" class="l-footer__link l-footer__link1">Home</a></li>
           <li class="l-footer__item"><a href="#aboutme" class="l-footer__link l-footer__link1">About Me</a></li>
           <li class="l-footer__item"><a href="#survice" class="l-footer__link">Survice</a></li>
-          <li class="l-footer__item"><a href="#works" class="l-footer__link">Works</a></li>
+          <li class="l-footer__item"><a href="#work" class="l-footer__link">Work</a></li>
+          <li class="l-footer__item"><a href="#blog" class="l-footer__link">Blog</a></li>
           <li class="l-footer__item"><a href="#contact" class="l-footer__link">Contact</a></li>
         </ul><!-- /.l-footer__list -->
       </nav><!-- /.l-footer__nav -->
       <div class="l-footer__logo"><img src="assets/image/BCooP_logo.png" alt="BCooPのロゴ"></div>
-    </div>
+    </div><!-- /.c-wrapper -->
     <p class="l-footer__copyright u-text-center" lang="en">&copy;copyrights 2020<br class="u-dn-md"> Naoki Yoshizawa All Rights Reserved.</p>
   </footer>
 </body>

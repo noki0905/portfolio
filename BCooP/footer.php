@@ -26,32 +26,20 @@
   <div class="c-wrapper">
     <nav class="l-footer__nav">
       <ul class="l-footer__list u-text-center">
-        <li class="l-footer__item"><a href="#aboutme" class="l-footer__link l-footer__link1">About Me</a></li>
-        <li class="l-footer__item"><a href="#survice" class="l-footer__link">Survice</a></li>
-        <li class="l-footer__item"><a href="#works" class="l-footer__link">Works</a></li>
+        <li class="l-footer__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#top"; } else{ bloginfo('url'); } ?>" class="l-footer__link l-footer__link1">Home</a></li>
+        <li class="l-footer__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#aboutme"; } else{ echo esc_url( home_url( ) ) . '#aboutme'; } ?>" class="l-footer__link l-footer__link1">About Me</a></li>
+        <li class="l-footer__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#survice"; } else{ echo esc_url( home_url( ) ) . '#survice'; } ?>" class="l-footer__link">Survice</a></li>
+        <li class="l-footer__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#work"; } else{ echo esc_url( home_url( '/' ) ) . 'work'; } ?>" class="l-footer__link">Work</a></li>
+        <li class="l-footer__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#blog"; } else{ echo esc_url( home_url( '/' ) ) . 'blog'; } ?>" class="l-footer__link">Blog</a></li>
         <li class="l-footer__item"><a href="#contact" class="l-footer__link">Contact</a></li>
       </ul><!-- /.l-footer__list -->
     </nav><!-- /.l-footer__nav -->
-    <div class="l-footer__logo"><img src="assets/image/BCooP_logo.png" alt="BCooPのロゴ"></div>
+    <div class="l-footer__logo"><img src="<?php echo get_template_directory_uri() ?>/assets/image/BCooP_logo.png" alt="BCooPのロゴ"></div>
   </div>
-  <p class="l-footer__copyright u-text-center" lang="en">&copy;copyrights 2020<br class="u-dn-md"> Naoki Yoshizawa All Rights Reserved.</p>
+  <p class="l-footer__copyright u-text-center" lang="en">&copy;copyrights <?php echo date( 'Y' ); ?><br class="u-dn-md"> Naoki Yoshizawa All Rights Reserved.</p>
 </footer>
 
 <?php wp_footer(); ?>
-
-<!-- jQuery -->
-<script
-src="https://code.jquery.com/jquery-3.4.1.min.js"
-integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-crossorigin="anonymous">
-</script>
-<script type="text/javascript" src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-
-<script type="text/javascript" src="assets/js/bundle/humberger.js"></script>
-<script type="text/javascript" src="assets/js/bundle/smoothscroll.js"></script>
-<script type="text/javascript" src="assets/js/bundle/swiperActive.js"></script>
-<script type="text/javascript" src="assets/js/bundle/moon.js"></script>
-<script type="text/javascript" src="assets/js/bundle/formAjax.js"></script>
 
 </body>
 </html>

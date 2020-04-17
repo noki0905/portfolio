@@ -59,6 +59,10 @@ jQuery( document ).ready(function() {
         const setAttrRed = { fill:"#D90000"};
         body.attr(setAttrRed);
       }
+      if ( scrollPos == 0 ) {
+        const setAttrYell = { fill:"#FFFF57"};
+        body.attr(setAttrYell);
+      }
     });
   });
 });

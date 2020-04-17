@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
   //initialize swiper when document ready
-  var mySwiper = new Swiper ('.tp-works__slider', {
+  var mySwiper = new Swiper ('.tp-work__slider', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,

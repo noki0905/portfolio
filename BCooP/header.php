@@ -6,17 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 
-  <!-- <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/image/logo-favicon.svg" type="image/svg"> -->
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/image/BCooP_logo.svg" type="image/svg">
   <link rel="favicon" href="<?php echo get_template_directory_uri(); ?>/assets/image/BCooP_logo.svg" type="image/svg">
-  <link rel="stylesheet" href="./assets/css/common.min.css">
-  <link rel="stylesheet" href="./assets/css/top-page/style.css">
 
-  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/common.min.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/top-page/style.css">
   <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-
   <script src="https://kit.fontawesome.com/35ebb59adf.js" crossorigin="anonymous"></script>
 
   <?php wp_head(); ?>
@@ -40,11 +35,11 @@
     </button><!-- /.c-hamburger -->
     <nav class="p-globalNav js-globalNav">
       <ul class="p-globalNav__list c-list-unstyled">
-        <li class="p-globalNav__item"><a href="#top" class="p-globalNav__link">Home</a></li>
-        <li class="p-globalNav__item"><a href="#aboutme" class="p-globalNav__link">About Me</a></li>
-        <li class="p-globalNav__item"><a href="#survice" class="p-globalNav__link">Survice</a></li>
-        <li class="p-globalNav__item"><a href="#works" class="p-globalNav__link">Works</a></li>
-        <li class="p-globalNav__item"><a href="#blog" class="p-globalNav__link">Blog</a></li>
+        <li class="p-globalNav__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#top"; } else{ bloginfo('url'); } ?>" class="p-globalNav__link">Home</a></li>
+        <li class="p-globalNav__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#aboutme"; } else{ echo esc_url( home_url( ) ) . '#aboutme'; } ?>" class="p-globalNav__link">About Me</a></li>
+        <li class="p-globalNav__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#survice"; } else{ echo esc_url( home_url( ) ) . '#survice'; } ?>" class="p-globalNav__link">Survice</a></li>
+        <li class="p-globalNav__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#work"; } else{ echo esc_url( home_url( '/' ) ) . 'work'; } ?>" class="p-globalNav__link">Work</a></li>
+        <li class="p-globalNav__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#blog"; } else{ echo esc_url( home_url( '/' ) ) . 'blog'; } ?>" class="p-globalNav__link">Blog</a></li>
         <li class="p-globalNav__item"><a href="#contact" class="p-globalNav__link">Contact</a></li>
       </ul>
     </nav><!-- /.p-globalNav -->
