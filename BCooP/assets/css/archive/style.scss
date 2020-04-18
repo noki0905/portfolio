@@ -17,12 +17,11 @@
   align-items: center;
   justify-content: center;
 }
-
-
 @include _mq-up(){
   .ar-list {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-end;
     padding: 8rem 0 2.4rem;
   }
 }

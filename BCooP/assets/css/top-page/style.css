@@ -146,6 +146,12 @@
   }
 }
 
+.tp-work .swiper-wrapper {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 .swiper-container.tp-work__slider {
   margin: 0 -2rem;
   padding: 8rem 0;
@@ -191,7 +197,8 @@
 }
 
 .tp-survice__img img {
-  border: 0.3rem solid #366B95;
+  padding: 2rem;
+  border: 0.8rem solid #366B95;
   border-radius: 0 4rem 0 4rem;
   -o-object-fit: cover;
      object-fit: cover;

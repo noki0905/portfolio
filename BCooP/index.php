@@ -47,16 +47,15 @@
     <h1 class="c-head1">Survice<span class="c-head1__deco"></span></h1><!-- /.c-head1 -->
     <ul class="tp-survice__wrapper">
       <li class="tp-survice__card">
-        <div class="tp-survice__img"><img src="<?php echo get_template_directory_uri() ?>/assets/image/BCooP_logo.png" alt=""></div>
+        <div class="tp-survice__img"><img src="<?php echo get_template_directory_uri() ?>/assets/image/coding.png" alt="Coding"></div>
         <h2 class="tp-survice__ttl u-text-center">コーディング</h2>
         <p class="tp-survice__info">
           LP・コーポレートサイトなどさまざまな形態のサイトコーディングをさせていただきます。<br>
-          オンラインで完結することを求められる中で、コーディングのスキルの習得にお悩みの方、ご相談ください。<br>
-          （今後、フロントエンドに特化していく方針です。）
+          オンラインで完結することを求められる中で、コーディングのスキルの習得にお悩みの方、ご相談ください。
         </p>
       </li><!-- /.tp-survice__card -->
       <li class="tp-survice__card">
-        <div class="tp-survice__img"><img src="<?php echo get_template_directory_uri() ?>/assets/image/BCooP_logo.png" alt=""></div>
+        <div class="tp-survice__img"><img src="<?php echo get_template_directory_uri() ?>/assets/image/design.png" alt="Design"></div>
         <h2 class="tp-survice__ttl u-text-center">デザイン</h2>
         <p class="tp-survice__info">
           企業・個人問わずお客様の『目的』を理解し、ただ『かっこいい』だけのサイトではなく、成果の上がるサイトを一緒に追求します。<br>
@@ -64,10 +63,10 @@
         </p>
       </li><!-- /.tp-survice__card -->
       <li class="tp-survice__card">
-        <div class="tp-survice__img"><img src="<?php echo get_template_directory_uri() ?>/assets/image/BCooP_logo.png" alt=""></div>
+        <div class="tp-survice__img"><img src="<?php echo get_template_directory_uri() ?>/assets/image/running.png" alt="Starting Position"></div>
         <h2 class="tp-survice__ttl u-text-center">サイト運用</h2>
         <p class="tp-survice__info">
-          新規サイトを立ち上げる場合、サイト運用も可能です。SEOキーワードの選定、アナリティクスの解析から、軽微なバグの修正、記事の投稿、機能追加など対応致します。<br>
+          サイトが出来たらスタート地点です。そこから共に走ります。SEOキーワードの選定、アナリティクスの解析から、軽微なバグの修正、記事の投稿、機能追加など対応致します。<br>
           リソースが避けなくなった既存のサイトの運用保守もお任せください。
         </p>
       </li><!-- /.tp-survice__card -->
@@ -92,8 +91,10 @@
         <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 
         <li class="tp-work__slide p-workCard swiper-slide u-text-center">
+          <a href="<?php the_permalink(); ?>">
           <h2 class="p-workCard__ttl"><?php the_title(); ?></h2>
-          <a href="<?php the_permalink(); ?>"><div class="p-workCard__img"><?php the_post_thumbnail('thumbnail'); ?></div></a>
+          <div class="p-workCard__img"><?php the_post_thumbnail('thumbnail'); ?></div>
+          </a>
           <p class="p-workCard__cate"><?php echo get_the_term_list( $post->ID, 'work_category', '', ' / ', '' ); ?></p>
         </li><!-- /.p-workCard -->
 

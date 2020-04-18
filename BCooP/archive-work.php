@@ -11,8 +11,10 @@
     <ul class="ar-list">
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <li class="ar-work__card p-workCard u-text-center">
+          <a href="<?php the_permalink(); ?>">
           <h2 class="p-workCard__ttl"><?php the_title(); ?></h2>
-          <a href="<?php the_permalink(); ?>"><div class="p-workCard__img"><?php the_post_thumbnail('thumbnail'); ?></div></a>
+          <div class="p-workCard__img"><?php the_post_thumbnail('thumbnail'); ?></div>
+          </a>
           <p class="p-workCard__cate"><?php echo get_the_term_list( $post->ID, 'work_category', '', ' / ', '' ); ?></p>
         </li><!-- /.ar-work__card p-workCard -->
         <?php endwhile; else:?>

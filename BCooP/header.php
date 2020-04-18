@@ -12,6 +12,16 @@
   <!-- fonts -->
   <script src="https://kit.fontawesome.com/35ebb59adf.js" crossorigin="anonymous"></script>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163882533-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163882533-1');
+  </script>
+
   <?php wp_head(); ?>
 
 </head>

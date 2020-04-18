@@ -1,5 +1,7 @@
 .tp-work {
-  
+  .swiper-wrapper {
+    align-items: flex-end;
+  }
 }
 .swiper-container.tp-work__slider {
   margin: 0 -2rem;

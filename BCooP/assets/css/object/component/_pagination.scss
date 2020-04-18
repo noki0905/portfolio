@@ -5,6 +5,10 @@
   margin: 0 1.6rem !important;
   background: $_color-ac1;
   opacity: 1;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .c-pagination .swiper-pagination-bullet-active::after {

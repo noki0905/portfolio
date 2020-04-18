@@ -3100,6 +3100,10 @@ Modifierは以下のとおりです。
   opacity: 1;
 }
 
+.c-pagination .swiper-pagination-bullet:focus {
+  outline: none;
+}
+
 .c-pagination .swiper-pagination-bullet-active::after {
   content: '';
   position: absolute;
