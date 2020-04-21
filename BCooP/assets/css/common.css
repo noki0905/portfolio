@@ -3195,20 +3195,6 @@ Modifierは以下のとおりです。
   transform: rotate(-45deg);
 }
 
-.u-visuallyHidden {
-  position: absolute;
-  white-space: nowrap;
-  width: .1rem;
-  height: .1rem;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  margin: -.1rem;
-}
-
 @media screen and (min-width: 768px) {
   .c-hamburger {
     width: 7rem;
@@ -4946,6 +4932,20 @@ categories: [utility]
   .u-dib-xl {
     display: inline-block !important;
   }
+}
+
+.u-visuallyHidden {
+  position: absolute;
+  white-space: nowrap;
+  width: .1rem;
+  height: .1rem;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -.1rem;
 }
 
 /* #Width

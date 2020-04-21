@@ -31,3 +31,16 @@ categories: [utility]
 @include _responsive(".u-dib") {
   display: inline-block !important;
 }
+
+.u-visuallyHidden {
+  position: absolute;
+  white-space: nowrap;
+  width: .1rem;
+  height: .1rem;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%); 
+  margin: -.1rem;
+}
