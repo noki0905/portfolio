@@ -45,7 +45,7 @@
       <ul class="p-globalNav__list c-list-unstyled">
         <li class="p-globalNav__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#top"; } else{ bloginfo('url'); } ?>" class="p-globalNav__link">Home</a></li>
         <li class="p-globalNav__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#aboutme"; } else{ echo esc_url( home_url( ) ) . '#aboutme'; } ?>" class="p-globalNav__link">About Me</a></li>
-        <li class="p-globalNav__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#survice"; } else{ echo esc_url( home_url( ) ) . '#survice'; } ?>" class="p-globalNav__link">Survice</a></li>
+        <li class="p-globalNav__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#service"; } else{ echo esc_url( home_url( ) ) . '#service'; } ?>" class="p-globalNav__link">Service</a></li>
         <li class="p-globalNav__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#work"; } else{ echo esc_url( home_url( '/' ) ) . 'work'; } ?>" class="p-globalNav__link">Work</a></li>
         <li class="p-globalNav__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#blog"; } else{ echo esc_url( home_url( '/' ) ) . 'blog'; } ?>" class="p-globalNav__link">Blog</a></li>
         <li class="p-globalNav__item"><a href="#contact" class="p-globalNav__link">Contact</a></li>

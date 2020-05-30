@@ -28,7 +28,7 @@
       <ul class="l-footer__list u-text-center">
         <li class="l-footer__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#top"; } else{ bloginfo('url'); } ?>" class="l-footer__link l-footer__link1">Home</a></li>
         <li class="l-footer__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#aboutme"; } else{ echo esc_url( home_url( ) ) . '#aboutme'; } ?>" class="l-footer__link l-footer__link1">About Me</a></li>
-        <li class="l-footer__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#survice"; } else{ echo esc_url( home_url( ) ) . '#survice'; } ?>" class="l-footer__link">Survice</a></li>
+        <li class="l-footer__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#service"; } else{ echo esc_url( home_url( ) ) . '#service'; } ?>" class="l-footer__link">Service</a></li>
         <li class="l-footer__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#work"; } else{ echo esc_url( home_url( '/' ) ) . 'work'; } ?>" class="l-footer__link">Work</a></li>
         <li class="l-footer__item"><a href="<?php if ( is_front_page() || is_home() ) { echo "#blog"; } else{ echo esc_url( home_url( '/' ) ) . 'blog'; } ?>" class="l-footer__link">Blog</a></li>
         <li class="l-footer__item"><a href="#contact" class="l-footer__link">Contact</a></li>

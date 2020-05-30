@@ -54,6 +54,13 @@
     font-size: 1.6rem;
   }
 
+  a{
+    color: $_color-ac1;
+  }
+  a:hover, a:visited {
+    color: rgba( $_color-ac1, $alpha: .6);
+  }
+
   img {
     max-width: 90%;
   }

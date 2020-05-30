@@ -65,6 +65,14 @@
   font-size: 1.6rem;
 }
 
+.si-article__content a {
+  color: #366B95;
+}
+
+.si-article__content a:hover, .si-article__content a:visited {
+  color: rgba(54, 107, 149, 0.6);
+}
+
 .si-article__content img {
   max-width: 90%;
 }
