@@ -1,5 +1,5 @@
 
-.tp-survice__wrapper {
+.tp-service__wrapper {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -8,14 +8,14 @@
   justify-content: space-between;
 }
 
-.tp-survice__card {
+.tp-service__card {
   width: 100%;
 }
-.tp-survice__card + .tp-survice__card {
+.tp-service__card + .tp-service__card {
   margin-top: 4rem;
 }
 
-.tp-survice__img {
+.tp-service__img {
   width: 70%;
   margin: 0 auto;
 
@@ -27,26 +27,26 @@
   }
 }
 
-.tp-survice__ttl {
+.tp-service__ttl {
   margin-top: 1.6rem;
 }
 
-.tp-survice__info {
+.tp-service__info {
   margin-top: .8rem;
   text-align: justify;
 }
 
 
 @include _mq-up(){
-  .tp-survice__wrapper {
+  .tp-service__wrapper {
     flex-direction: row;
     padding-top: 8rem;
   }
 
-  .tp-survice__card {
+  .tp-service__card {
     width: 30%;
   }
-  .tp-survice__card + .tp-survice__card {
+  .tp-service__card + .tp-service__card {
     margin-top: 0;
   }
 }

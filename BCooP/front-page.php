@@ -42,37 +42,37 @@
   </div><!-- /.c-wrapper -->
 </section><!-- /.tp-aboutMe -->
 
-<section class="l-section tp-survice" id="survice">
+<section class="l-section tp-service" id="service">
   <div class="c-wrapper">
-    <h1 class="c-head1">Survice<span class="c-head1__deco"></span></h1><!-- /.c-head1 -->
-    <ul class="tp-survice__wrapper">
-      <li class="tp-survice__card">
-        <div class="tp-survice__img"><img src="<?php echo get_template_directory_uri() ?>/assets/image/coding.png" alt="Coding"></div>
-        <h2 class="tp-survice__ttl u-text-center">コーディング</h2>
-        <p class="tp-survice__info">
+    <h1 class="c-head1">Service<span class="c-head1__deco"></span></h1><!-- /.c-head1 -->
+    <ul class="tp-service__wrapper">
+      <li class="tp-service__card">
+        <div class="tp-service__img"><img src="<?php echo get_template_directory_uri() ?>/assets/image/coding.png" alt="Coding"></div>
+        <h2 class="tp-service__ttl u-text-center">コーディング</h2>
+        <p class="tp-service__info">
           LP・コーポレートサイトなどさまざまな形態のサイトコーディングをさせていただきます。<br>
           オンラインで完結することを求められる中で、コーディングのスキルの習得にお悩みの方、ご相談ください。
         </p>
-      </li><!-- /.tp-survice__card -->
-      <li class="tp-survice__card">
-        <div class="tp-survice__img"><img src="<?php echo get_template_directory_uri() ?>/assets/image/design.png" alt="Design"></div>
-        <h2 class="tp-survice__ttl u-text-center">デザイン</h2>
-        <p class="tp-survice__info">
+      </li><!-- /.tp-service__card -->
+      <li class="tp-service__card">
+        <div class="tp-service__img"><img src="<?php echo get_template_directory_uri() ?>/assets/image/design.png" alt="Design"></div>
+        <h2 class="tp-service__ttl u-text-center">デザイン</h2>
+        <p class="tp-service__info">
           企業・個人問わずお客様の『目的』を理解し、ただ『かっこいい』だけのサイトではなく、成果の上がるサイトを一緒に追求します。<br>
           迷いを起こさせないユーザビリティの高さ、行動動線を意識したデザインの提案をさせていただきます。
         </p>
-      </li><!-- /.tp-survice__card -->
-      <li class="tp-survice__card">
-        <div class="tp-survice__img"><img src="<?php echo get_template_directory_uri() ?>/assets/image/running.png" alt="Starting Position"></div>
-        <h2 class="tp-survice__ttl u-text-center">サイト運用</h2>
-        <p class="tp-survice__info">
+      </li><!-- /.tp-service__card -->
+      <li class="tp-service__card">
+        <div class="tp-service__img"><img src="<?php echo get_template_directory_uri() ?>/assets/image/running.png" alt="Starting Position"></div>
+        <h2 class="tp-service__ttl u-text-center">サイト運用</h2>
+        <p class="tp-service__info">
           サイトが出来たらスタート地点です。そこから共に走ります。SEOキーワードの選定、アナリティクスの解析から、軽微なバグの修正、記事の投稿、機能追加など対応致します。<br>
           リソースが避けなくなった既存のサイトの運用保守もお任せください。
         </p>
-      </li><!-- /.tp-survice__card -->
-    </ul><!-- /.tp-survice__wrapper -->
+      </li><!-- /.tp-service__card -->
+    </ul><!-- /.tp-service__wrapper -->
   </div><!-- /.c-wrapper -->
-</section><!-- /.tp-survice -->
+</section><!-- /.tp-service -->
 
 <section class="l-section tp-work" id="work">
   <div class="c-wrapper">
