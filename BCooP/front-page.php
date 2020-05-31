@@ -14,7 +14,7 @@
   <div class="c-wrapper">
     <h1 class="c-head1">About Me<span class="c-head1__deco"></span></h1>
     <div class="tp-aboutMe__wrapper">
-      <div class="tp-aboutMe__img"><img src="<?php echo get_template_directory_uri() ?>/assets/image/naoki_yohiszawa.JPG" alt="Naoki Yoshizawa"></div>
+      <div class="tp-aboutMe__img"><img data-src="<?php echo get_template_directory_uri() ?>/assets/image/naoki_yohiszawa.JPG" alt="Naoki Yoshizawa" class="lazy"></div>
       <div class="tp-aboutMe__left">
         <h2 class="tp-aboutMe__name">Naoki Yoshizawa</h2>
         <span class="tp-aboutMe__age">Age 25</span>
@@ -83,7 +83,7 @@
         <?php
           $args = array(
             'post_type' => 'work', 
-            'posts_per_page' => 12 /* 表示する数 */
+            'posts_per_page' => 10 /* 表示する数 */
           );
         ?>
         <?php $wp_query = new WP_Query( $args ); ?>
@@ -93,7 +93,7 @@
         <li class="tp-work__slide p-workCard swiper-slide u-text-center">
           <a href="<?php the_permalink(); ?>">
           <h2 class="p-workCard__ttl"><?php the_title(); ?></h2>
-          <div class="p-workCard__img"><?php the_post_thumbnail('thumbnail'); ?></div>
+          <div class="p-workCard__img"><img src="" data-src="<?php the_post_thumbnail_url( ); ?>" alt="<?php the_title(); ?>" class="lazy"></div>
           </a>
           <p class="p-workCard__cate"><?php echo get_the_term_list( $post->ID, 'work_category', '', ' / ', '' ); ?></p>
         </li><!-- /.p-workCard -->
@@ -120,9 +120,9 @@
       <li class="tp-blog__card p-blogCard">
         <a href="<?php the_permalink(); ?>">
         <?php if ( get_post_thumbnail_id() ): ?>
-          <div class="p-blogCard__img"><?php the_post_thumbnail('thumbnail'); ?></div>
+          <div class="p-blogCard__img"><img src="" data-src="<?php the_post_thumbnail_url( ); ?>" alt="<?php the_title(); ?>" class="lazy"></div>
         <?php else: ?>
-          <div class="p-blogCard__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/image/BCooP_logo.png" alt="Logo of BCooP"></div>
+          <div class="p-blogCard__img"><img src="" data-src="<?php echo get_template_directory_uri(); ?>/assets/image/BCooP_logo.png" alt="<?php the_title(); ?>" class="lazy"></div>
         <?php endif; ?>
           <h2 class="p-blogCard__ttl u-text-justify"><?php echo get_the_title(); ?></h2>
         </a>

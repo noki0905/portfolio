@@ -83,6 +83,20 @@ function load_styles_js() {
     true
   );
 
+  wp_enqueue_script(
+    'deley_img',
+    get_template_directory_uri() .'/assets/js/bundle/deley-img.js',
+    date('YmdGi', filemtime( get_template_directory().'/assets/js/bundle/deley-img.js' )),
+    true
+  );
+
+  wp_enqueue_script(
+    'load_animation',
+    get_template_directory_uri() .'/assets/js/bundle/load-animation.js',
+    date('YmdGi', filemtime( get_template_directory().'/assets/js/bundle/load-animation.js' )),
+    true
+  );
+
   // wp_enqueue_script(
   //   'formAjax_js',
   //   get_template_directory_uri() .'/assets/js/bundle/formAjax.js',

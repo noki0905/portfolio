@@ -24,7 +24,7 @@
       <li class="ar-blog__card p-blogCard">
         <a href="<?php the_permalink(); ?>">
         <?php if ( get_post_thumbnail_id() ): ?>
-          <div class="p-blogCard__img"><?php the_post_thumbnail('thumbnail'); ?></div>
+          <div class="p-blogCard__img"><img src="" data-src="<?php the_post_thumbnail_url( ); ?>" alt="<?php the_title(); ?>" class="lazy"></div>
         <?php else: ?>
           <div class="p-blogCard__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/image/BCooP_logo.png" alt="Logo of BCooP"></div>
         <?php endif; ?>
@@ -45,7 +45,7 @@
         <li class="ar-blog__card p-blogCard">
           <a href="<?php the_permalink(); ?>">
           <?php if ( get_post_thumbnail_id() ): ?>
-            <div class="p-blogCard__img"><?php the_post_thumbnail('thumbnail'); ?></div>
+            <div class="p-blogCard__img"><img src="" data-src="<?php the_post_thumbnail_url( ); ?>" alt="<?php the_title(); ?>" class="lazy"></div>
           <?php else: ?>
             <div class="p-blogCard__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/image/BCooP_logo.png" alt="Logo of BCooP"></div>
           <?php endif; ?>

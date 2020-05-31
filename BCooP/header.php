@@ -27,6 +27,9 @@
 </head>
 
 <body id="top">
+  <div id="js-load" class="p-loading">
+    <div class="p-loading__content"></div>
+  </div>
   <header class="l-header">
     <svg class="moon_wrap" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
       <circle id="moon_body" stroke-width="0" stroke="#F5F5F5" fill="#FFFF57" fill-opacity=".7" />

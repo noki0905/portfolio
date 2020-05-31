@@ -34,7 +34,7 @@
         <li class="l-footer__item"><a href="#contact" class="l-footer__link">Contact</a></li>
       </ul><!-- /.l-footer__list -->
     </nav><!-- /.l-footer__nav -->
-    <div class="l-footer__logo"><img src="<?php echo get_template_directory_uri() ?>/assets/image/BCooP_logo.png" alt="BCooPのロゴ"></div>
+    <div class="l-footer__logo"><img data-src="<?php echo get_template_directory_uri() ?>/assets/image/BCooP_logo.png" alt="BCooPのロゴ" class="lazy"></div>
   </div>
   <p class="l-footer__copyright u-text-center" lang="en">&copy;copyrights <?php echo date( 'Y' ); ?><br class="u-dn-md"> Naoki Yoshizawa All Rights Reserved.</p>
 </footer>

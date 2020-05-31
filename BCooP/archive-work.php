@@ -13,7 +13,7 @@
         <li class="ar-work__card p-workCard u-text-center">
           <a href="<?php the_permalink(); ?>">
           <h2 class="p-workCard__ttl"><?php the_title(); ?></h2>
-          <div class="p-workCard__img"><?php the_post_thumbnail('thumbnail'); ?></div>
+          <div class="p-workCard__img"><img src="" data-src="<?php the_post_thumbnail_url( ); ?>" alt="<?php the_title(); ?>" class="lazy"></div>
           </a>
           <p class="p-workCard__cate"><?php echo get_the_term_list( $post->ID, 'work_category', '', ' / ', '' ); ?></p>
         </li><!-- /.ar-work__card p-workCard -->

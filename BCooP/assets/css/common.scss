@@ -183,22 +183,11 @@
  * プレフィックス（接頭辞）として`c-`をつけます。
  */
 @import "object/component/_wrapper";
-@import "object/component/_layout";
-@import "object/component/_flex";
 @import "object/component/_button";
-@import "object/component/_media";
-@import "object/component/_flag";
 @import "object/component/_list-unstyled";
-@import "object/component/_list-ordered";
-@import "object/component/_list-mark";
-@import "object/component/_embed";
-@import "object/component/_ratio";
-@import "object/component/_table";
-@import "object/component/_checkbox";
 @import "object/component/_na";
 @import "object/component/_pagination";
 @import "object/component/_humberger";
-@import "object/component/_list-num";
 @import "object/component/_moon";
 @import "object/component/_arrowDown";
 @import "object/component/_head1";
@@ -217,20 +206,12 @@
 @import "object/project/_icon";
 @import "object/project/_button";
 @import "object/project/_select";
-@import "object/project/_tabMenu";
-@import "object/project/_breadcrumb";
-@import "object/project/_label";
-@import "object/project/_badge";
-@import "object/project/_box";
-@import "object/project/_card";
 @import "object/project/_globalNav";
-@import "object/project/_accordionMenu";
-@import "object/project/_banner";
 @import "object/project/_slider";
-@import "object/project/_hoverMenu";
 @import "object/project/_contact";
 @import "object/project/_workCard";
 @import "object/project/_blogCard";
+@import "object/project/_loading";
 
 /* -----------------------------------------------------------------------------
    #Scope
