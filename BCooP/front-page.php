@@ -74,6 +74,15 @@
   </div><!-- /.c-wrapper -->
 </section><!-- /.tp-service -->
 
+<section class="l-section tp-service" id="campaign">
+  <div class="c-wrapper">
+    <h1 class="c-head1">Campaign<span class="c-head1__deco"></span></h1><!-- /.c-head1 -->
+    <div class="p-blog__list">
+      <img src="<?php echo get_template_directory_uri() ?>/assets/image/campaign/ec-site_campaign.jpg" alt="最短・最安でECサイト制作 コロナ第２波への対策出来ていますか？ 個人だから出来る安さとスピード 運用までサポートします">
+    </div>
+  </div><!-- /.c-wrapper -->
+</section><!-- /.tp-service -->
+
 <section class="l-section tp-work" id="work">
   <div class="c-wrapper">
     <h1 class="c-head1">Work<span class="c-head1__deco"></span></h1>
