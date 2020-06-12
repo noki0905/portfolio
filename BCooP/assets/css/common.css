@@ -1404,11 +1404,6 @@ categories: [component]
           transform: rotateZ(30deg);
 }
 
-.c-linkArrow:hover {
-  -webkit-box-shadow: inset .7rem .7rem 1rem #c2c2c2, inset -.7rem -.7rem 1rem #ffffff;
-          box-shadow: inset .7rem .7rem 1rem #c2c2c2, inset -.7rem -.7rem 1rem #ffffff;
-}
-
 .c-linkArrow:hover .c-linkArrow__deco {
   -webkit-transform: translateX(50rem);
           transform: translateX(50rem);

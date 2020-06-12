@@ -41,10 +41,6 @@
   }
 }
 
-.c-linkArrow:hover {
-  box-shadow: inset .7rem .7rem 1rem #c2c2c2, inset -.7rem -.7rem 1rem #ffffff;
-}
-
 .c-linkArrow:hover .c-linkArrow__deco {
   transform: translateX(50rem);
 }
