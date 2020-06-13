@@ -80,6 +80,9 @@
     <div class="p-blog__list">
       <img src="<?php echo get_template_directory_uri() ?>/assets/image/campaign/ec-site_campaign.jpg" alt="最短・最安でECサイト制作 コロナ第２波への対策出来ていますか？ 個人だから出来る安さとスピード 運用までサポートします">
     </div>
+    <div class="u-text-center">
+      <a href="<?php echo esc_url( home_url( '/' ) ) . 'site-contact' ?>" class="c-linkArrow">ご相談はコチラ<span class="c-linkArrow__deco"></span></a>
+    </div>
   </div><!-- /.c-wrapper -->
 </section><!-- /.tp-service -->
 

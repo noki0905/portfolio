@@ -1,0 +1,86 @@
+.p-siteContact__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 1.8rem;
+  margin-top: 2.4rem;
+}
+@include _mq-up(){
+  .p-siteContact__list {
+    margin-top: 4rem;
+  }
+}
+
+.p-siteContact__title {
+  position: relative;
+  margin: 2rem 0 .5rem 0;
+  font-weight: bold;
+  color: $_color-ac1;
+}
+.p-siteContact__title--textarea {
+  align-self: start;
+}
+@include _mq-up(){
+  .p-siteContact__title {
+    width: 30%;
+    margin: 2.4rem 0;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 2rem;
+      width: 25%;
+      height: 2px;
+      background-color: $_color-ac1;
+    }
+  }
+}
+
+.p-siteContact__item {
+  width: 100%;
+  font-size: 1.6rem;
+}
+@include _mq-up(){
+  .p-siteContact__item {
+    width: 68%;
+    margin-left: 1rem;
+  }
+}
+
+.p-siteContact__text {
+  width: 100%;
+  padding-left: 1rem;
+  border: 1px solid $_color-ac1;
+}
+@include _mq-up(){
+  .p-siteContact__text--area {
+    margin-top: 1.6rem;
+  }
+}
+
+.p-siteContact__button {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  border: 1px solid $_color-ac1;
+}
+.p-siteContact__button + .p-siteContact__button {
+  margin-top: 0;
+}
+@include _mq-up(){
+  .p-siteContact__button {
+    margin-bottom: 4rem;
+  }
+  .p-siteContact__button + .p-siteContact__button {
+    margin-left: 3rem;
+  }
+}
+
+.p-siteContact__comp {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  text-align: center;
+
+  &:first-of-type {
+    margin-top: 4rem;
+  }
+}

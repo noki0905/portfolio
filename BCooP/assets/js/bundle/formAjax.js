@@ -6,14 +6,13 @@ jQuery.ajax({
   statusCode: {
     0: function() {
       //Success message
-      document.getElementById("message").innerHTML = "Your form has been submitted!";
+      document.getElementById("message").innerHTML = "Your form has been submitted. Thank you!!";
+      console.log("Success");
       window.location.replace("ThankYou.html");
     },
     200: function() {
       //Success Message
-      document.getElementById("message").innerHTML = "Your form has been submitted!";
-      console.log("Success");
-      window.location.replace("ThankYou.html");
+      document.getElementById("message").innerHTML = "Something went wrong. NOT been submitted! Try again";
     }
   }
 })
