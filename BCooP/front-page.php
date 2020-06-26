@@ -4,7 +4,7 @@
   <div class="c-wrapper">
     <h1 class="u-visuallyHidden"><?php wp_title(); ?></h1>
     <p class="tp-firstView__copy u-text-right">
-      I'm Naoki Yoshizawa<br>Web Developer in Japan<br>To be yourself at this moment
+      I am Naoki Yoshizawa<br>Web Developer / Designer<br>based in Nagano<br>To be yourself at this moment
     </p><!-- /.tp-firstView__copy -->
     <div class="c-arrowDown"></div>
   </div><!-- /.c-wrapper -->
