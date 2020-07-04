@@ -60,7 +60,7 @@ function load_styles_js() {
   if ( is_front_page() || is_page( 'inquiry' ) ) {
     wp_enqueue_style(
       'swiper_style',
-      'https://unpkg.com/swiper/css/swiper.min.css'
+      'https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css'
     );
   }
 
@@ -116,7 +116,7 @@ function load_styles_js() {
   if ( is_front_page() || is_home() ) {
     wp_enqueue_script(
       'swiper_js',
-      'https://unpkg.com/swiper/js/swiper.min.js'
+      'https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js'
     );
     wp_enqueue_script(
       'swiperActive_js',
