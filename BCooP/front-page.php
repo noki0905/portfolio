@@ -25,8 +25,8 @@
           自然と服と人が好き。<br><br>
           2015年 長野高専卒業<br>
           2015-19年 大手メーカーにてFAエンジニア<br>
-          2020年 フリーランスWEB製作者<br>
-          2020年 カナダでフロントエンド技術を学習中(のはずでした)<br>
+          2020年 カナダ留学のため退職→行けず。<br>
+          2020年 フリーランスWEB製作/ Shopify/ WordPressなど<br>
         </p>
         <ul class="tp-aboutMe__snsList">
           <li class="tp-aboutMe__snsItem u-text-center"><a href="https://twitter.com/noki0905" target="_blank" rel=”noopener”><i class="fab fa-twitter"></i></a></li>

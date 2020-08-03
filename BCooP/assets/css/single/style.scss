@@ -10,7 +10,7 @@
 }
 @include _mq-up(){
   .si-article {
-    padding: 3.2rem 10%;
+    padding: 3.2rem 15%;
     border-radius: 1.6rem;
     border: .3rem solid $_color-ac1;
   }
@@ -50,7 +50,7 @@
   }
   p {
     margin: 1.6rem 0;
-    line-height: 1.5;
+    line-height: 1.7;
     font-size: 1.6rem;
   }
 
@@ -68,7 +68,7 @@
   h1,h2,h3,h4,h5,h6 {
     margin: 3.2rem 0 1rem;
     color: $_color-ac1;
-    line-height: 1.5;
+    line-height: 1.7;
   }
   h1,h2 {
     position: relative;
@@ -148,6 +148,9 @@
       color: $_color-ac1;
       line-height: 1.5;
     }
+    h3,h4,h5,h5 {
+      margin-top: 3.2rem;
+    }
     h1, h2 {
       &::after {
         width: 4rem;
@@ -160,4 +163,11 @@
     }
   }
 
+}
+
+.schema-how-to-steps {
+  padding-left: 20px;
+  li {
+    list-style: decimal;
+  }
 }

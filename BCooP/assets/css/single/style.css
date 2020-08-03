@@ -4,7 +4,7 @@
 
 @media screen and (min-width: 768px) {
   .si-article {
-    padding: 3.2rem 10%;
+    padding: 3.2rem 15%;
     border-radius: 1.6rem;
     border: 0.3rem solid #366B95;
   }
@@ -61,7 +61,7 @@
 
 .si-article__content p {
   margin: 1.6rem 0;
-  line-height: 1.5;
+  line-height: 1.7;
   font-size: 1.6rem;
 }
 
@@ -80,7 +80,7 @@
 .si-article__content h1, .si-article__content h2, .si-article__content h3, .si-article__content h4, .si-article__content h5, .si-article__content h6 {
   margin: 3.2rem 0 1rem;
   color: #366B95;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .si-article__content h1, .si-article__content h2 {
@@ -189,6 +189,9 @@
     color: #366B95;
     line-height: 1.5;
   }
+  .si-article__content h3, .si-article__content h4, .si-article__content h5, .si-article__content h5 {
+    margin-top: 3.2rem;
+  }
   .si-article__content h1::after, .si-article__content h2::after {
     width: 4rem;
     height: 4rem;
@@ -198,4 +201,12 @@
   .si-article__content p {
     margin: 2.4rem;
   }
+}
+
+.schema-how-to-steps {
+  padding-left: 20px;
+}
+
+.schema-how-to-steps li {
+  list-style: decimal;
 }
